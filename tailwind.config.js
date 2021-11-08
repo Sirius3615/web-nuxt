@@ -3,7 +3,7 @@ module.exports = {
     prefix: '',
     important: false,
     separator: ':',
-    theme: {},
+   theme: {},
     variants: {},
     plugins: [],
   }
