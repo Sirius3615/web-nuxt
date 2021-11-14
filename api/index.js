@@ -2,10 +2,10 @@
 const express = require("express");
 const app = express();
 var cors = require('cors')
-const fetch = require('node-fetch');
+const fetch = require('node-fetch').default;
 const JSONdb = require('simple-json-db');
-const db = new JSONdb('./databases/database.json');
-const store = require('data-store')({ path: process.cwd() + './databases/data.json' });
+const db = new JSONdb('./database.json');
+const store = require('data-store')({ path: process.cwd() + './data.json' });
 
 var API_KEY = process.env.API_KEY;
 var API_KEY_SECRET = process.env.API_KEY_SECRET;
@@ -92,11 +92,11 @@ const staff = [
 setInterval(function(){
    ;(async () => {
  var url = 'https://ll.thespacedevs.com/2.2.0/launch/upcoming/?limit=30&hide_recent_previous=true&mode=detailed&format=json';
-      fetch(url)
+    await fetch(url)
     .then(res => res.json())
     .then(json => {
-store.del('launch_list');
-store.union('launch_list', json);
+   store.del('launch_list');
+   store.union('launch_list', json);
         console.log('fetched launch')
       });
       })()
@@ -125,14 +125,14 @@ store.union('events_list', json);
 // launch events
 app.get("/api/launches/all", (req, res, next) => {
  const launches = store.get('launch_list')
-  res.send(launches)
+   res.send(launches)
   console.log('Requested')
 });
 
 //space events
 app.get("/api/events/all", (req, res, next) => {
  const space_events = store.get('events_list')
-  res.send(space_events)
+   res.send(space_events)
   console.log('Requested')
 });
 
@@ -148,7 +148,7 @@ app.get("/api/staff",(req, res, next) => {
   setInterval(function() {
     
     var url = 'https://api.spaceflightnewsapi.net/v3/articles?_limit=1';
-        fetch(url)
+        fetch(url) 
           .then(response => response.json())
           .then(data => {
             data.forEach((article) => {
@@ -198,11 +198,12 @@ app.get("/api/staff",(req, res, next) => {
     },  300 * 1000); // checks time every 5 minutes
 
   
-
+ 
 //============
-// LISTENER
+// LISTENER 
 
-const listener = app.listen("8000", () => {
+
+const listener = app.listen(8080, () => {
   console.log("API is listening on port " + listener.address().port );
 });
 
