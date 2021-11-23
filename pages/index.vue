@@ -6,18 +6,88 @@
 <div class="m-4">
 <br>
 
+<!-- launches -->
+<div v-for="launch in launches">
+<div class="border-0 rounded-2xl bg-gray-100 dark:bg-gray-700 shadow-lg">
+  <div class="grid grid-cols-1 sm:grid-cols-2 sm:px-8 sm:py-12 sm:gap-x-8 md:py-16">
+    <div class="relative z-10 col-start-1 row-start-1 px-4 pt-40 pb-3 bg-gradient-to-t from-black sm:bg-none">
+      <p v-if="launch.results[0].rocket.configuration.manufacturer.name" class="text-sm font-medium text-gray-500 dark:text-white sm:mb-1 sm:text-gray-500 sm:dark:text-gray-300 ">{{ launch.results[0].rocket.configuration.manufacturer.name }}</p>
+      <h2 class="text-xl font-semibold text-green-400 sm:text-2xl sm:leading-7 md:text-3xl">{{ launch.results[0].name }}</h2>
+    </div>
+    <div class="col-start-1 row-start-2 px-4 sm:pb-4">
+      <div class="inline-flex space-x-4 mt-2">
+      <a :href="`/launches/next/` + launch.results[0].slug" class="flex-1 w-14 bg-green-300 dark:bg-green-500  font-bold py-2 px-4 rounded-full " v-if="launch.results[0].status.abbrev === 'Go'"> {{ launch.results[0].status.abbrev }}</a>
+      <a :href="`/launches/next/` + launch.results[0].slug" class="flex-1 w-14 bg-yellow-400 dark:bg-yellow-400  font-bold py-2 px-3 rounded-full " v-else> {{ launch.results[0].status.abbrev }}</a>
+      <a :href="`/launches/next/` + launch.results[0].slug" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Info</a>
+          
+          <span v-if="launch.results[0].vidURLs[0]" class="relative inline-flex rounded-md shadow-sm">
+              <a v-if="launch.results[i].vidURLs[0]" :href="launch.results[i].vidURLs[0].url" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Watch Live</a>
+              <span v-if="launch.results[0].webcast_live === true" class="flex absolute h-3 w-3 top-0 right-0 ">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+              </span>
+          </span> 
 
+        </div>
+      <div class="flex items-center text-sm font-medium my-5 sm:mt-2 sm:mb-4"> </div>
+      <hr class="w-16 border-gray-300 dark:border-white hidden sm:block">
+    </div>
+    <div class="col-start-1 row-start-3 space-y-3 px-4 pb-4">
+      <p v-if="launch.results[0].mission" class="flex items-center text-black dark:text-white text-sm font-medium ">
+        {{ launch.results[0].mission.description }}
+      </p>
+      
+      <Countdown :date="launch.results[0].net" @onFinish="finish()"></Countdown>
 
+    </div>
+    <div class="col-start-1 row-start-1 flex sm:col-start-2 sm:row-span-3">
+      <div class="w-full grid grid-cols-3 grid-rows-2 gap-2">
+        <div class="relative col-span-3 row-span-2 md:col-span-3 ">
+          <img :src="launch.results[0].image" :alt="launch.results[0].name" class="absolute inset-0 w-full h-full object-cover bg-gray-100 sm:rounded-lg rounded-xl md:shadow-lg lg:shadow-lg" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 
+<br>
 
+<div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2 p-0 m-0">
+	<div v-for="i in 3" :key="i" >
+  	<div v-for="launch in launches">
+    
+		<div class="flex flex-col bg-gray-100 dark:bg-gray-700 rounded-lg m-2 shadow-lg">
+			<div class="h-40 rounded-lg">
+       <img :src="launch.results[i].image" alt="" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
+      </div>
+			<div class="flex flex-col items-start p-4 mt-2">
+          <div class="inline-flex space-x-4 mb-2 ">
+            <a :href="`/launches/next/` + launch.results[i].slug" class="flex-1 w-14 bg-green-300 dark:bg-green-500  font-bold py-2 px-4 rounded-full " v-if="launch.results[i].status.abbrev === 'Go'"> {{ launch.results[i].status.abbrev }}</a>
+            <a :href="`/launches/next/` + launch.results[i].slug" class="flex-1 w-14 bg-yellow-400 dark:bg-yellow-400  font-bold py-2 px-3 rounded-full " v-else> {{ launch.results[i].status.abbrev }}</a>
+            <a :href="`/launches/next/` + launch.results[i].slug" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Info</a>
 
+               <span v-if="launch.results[i].vidURLs[0]" class="relative inline-flex rounded-md shadow-sm">
+                  <a v-if="launch.results[i].vidURLs[0]" :href="launch.results[i].vidURLs[0].url" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Watch Live</a>
+                      <span v-if="launch.results[i].webcast_live === true" class="flex absolute h-3 w-3 top-0 right-0 ">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                      </span>
+                  </span>                               
+          </div>
+				<h4 class="text-xl font-semibold pb-3"> {{ launch.results[i].name }}</h4>
+				<p class="text-sm" v-if="launch.results[i].mission"> {{ launch.results[i].mission.description }} </p>
+        <Countdown class="mt-2" :date="launch.results[i].net" @onFinish="finish()"></Countdown> <!-- Position questionable, add status thing to all as well as buttons for watch and info! -->
+    
+      </div>
+		</div>
+  </div>
+</div>
+</div>
 
-
-
-
-
-
-
+<br>
+<Ad/>
+<br>
 
 <!-- News -->
 <div v-for="news in newss.slice(0, 1)">
@@ -35,11 +105,13 @@
       <p class="flex items-center text-black dark:text-white text-sm font-medium ">
         {{ news.summary}}
       </p>
+       <CountUpAgo class="mt-2" :date="news.publishedAt"></CountUpAgo> 
+
     </div>
     <div class="col-start-1 row-start-1 flex sm:col-start-2 sm:row-span-3">
       <div class="w-full grid grid-cols-3 grid-rows-2 gap-2">
         <div class="relative col-span-3 row-span-2 md:col-span-3 ">
-          <img :src="news.imageUrl" alt="" class="absolute inset-0 w-full h-full object-cover bg-gray-100 sm:rounded-lg rounded-xl md:shadow-lg lg:shadow-lg" />
+          <img :src="news.imageUrl" :alt="news.title" class="absolute inset-0 w-full h-full object-cover bg-gray-100 sm:rounded-lg rounded-xl md:shadow-lg lg:shadow-lg" />
         </div>
       </div>
     </div>
@@ -50,19 +122,141 @@
 <br>
 
 <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2 p-0 m-0">
-		<div v-for="news in newss.slice(1, 4)">
-		<div class="flex flex-col bg-gray-400 dark:bg-gray-700 rounded-lg m-2 shadow-lg">
+	<div v-for="news in newss.slice(1, 4)">
+		<div class="flex flex-col bg-gray-100 dark:bg-gray-700 rounded-lg m-2 shadow-lg">
 			<div class="h-40 rounded-lg">
        <img :src="news.imageUrl" alt="" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
       </div>
 			<div class="flex flex-col items-start p-4 mt-4">
 				<a :href="news.url"><h4 class="text-xl font-semibold pb-3"> {{ news.title }}</h4></a>
 				<p class="text-sm"> {{ news.summary }} </p>
+        <CountUpAgo class="mt-2" :date="news.publishedAt"></CountUpAgo> 
       </div>
 		</div>
+  </div>
+</div>
+
+<br>
+<Ad/>
+<br>
+
+<!-- Blog -->
+<div v-for="blog in blogg.slice(0, 1)">
+<div class="border-0 rounded-2xl bg-gray-100 dark:bg-gray-700 shadow-lg">
+  <div class="grid grid-cols-1 sm:grid-cols-2 sm:px-8 sm:py-12 sm:gap-x-8 md:py-16">
+    <div class="relative z-10 col-start-1 row-start-1 px-4 pt-40 pb-3 bg-gradient-to-t from-black sm:bg-none">
+      <a :href="blog.url"><p class="text-sm font-medium text-gray-500 dark:text-white sm:mb-1 sm:text-gray-500 sm:dark:text-gray-300 ">{{ blog.newsSite }}</p></a>
+      <a :href="blog.url"><h2 class="text-xl font-semibold text-green-400 sm:text-2xl sm:leading-7 md:text-3xl">{{ blog.title }}</h2></a>
+    </div>
+    <div class="col-start-1 row-start-2 px-4 sm:pb-4">
+      <div class="flex items-center text-sm font-medium my-5 sm:mt-2 sm:mb-4"> </div>
+      <hr class="w-16 border-gray-300 dark:border-white hidden sm:block">
+    </div>
+    <div class="col-start-1 row-start-3 space-y-3 px-4 pb-4">
+      <p class="flex items-center text-black dark:text-white text-sm font-medium ">
+        {{ blog.summary}}
+      </p>
+      <CountUpAgo class="mt-2" :date="blog.publishedAt"></CountUpAgo> 
+    </div>
+    <div class="col-start-1 row-start-1 flex sm:col-start-2 sm:row-span-3">
+      <div class="w-full grid grid-cols-3 grid-rows-2 gap-2">
+        <div class="relative col-span-3 row-span-2 md:col-span-3 ">
+          <img :src="blog.imageUrl" :alt="blog.title" class="absolute inset-0 w-full h-full object-cover bg-gray-100 sm:rounded-lg rounded-xl md:shadow-lg lg:shadow-lg" />
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 
+<br>
+
+<div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2 p-0 m-0">
+	<div v-for="blog in blogg.slice(1, 4)">
+		<div class="flex flex-col bg-gray-100 dark:bg-gray-700 rounded-lg m-2 shadow-lg">
+			<div class="h-40 rounded-lg">
+       <img :src="blog.imageUrl" alt="" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
+      </div>
+			<div class="flex flex-col items-start p-4 mt-4">
+				<a :href="blog.url"><h4 class="text-xl font-semibold pb-3"> {{ blog.title }}</h4></a>
+				<p class="text-sm"> {{ blog.summary }} </p>
+        <CountUpAgo class="mt-2" :date="blog.publishedAt"></CountUpAgo> 
+      </div>
+		</div>
+  </div>
+</div>
+
+<br>
+<Ad/>
+<br>
+
+<!-- events -->
+<div v-for="event in events">
+<div class="border-0 rounded-2xl bg-gray-100 dark:bg-gray-700 shadow-lg">
+  <div class="grid grid-cols-1 sm:grid-cols-2 sm:px-8 sm:py-12 sm:gap-x-8 md:py-16">
+    <div class="relative z-10 col-start-1 row-start-1 px-4 pt-40 pb-3 bg-gradient-to-t from-black sm:bg-none">
+        <h2 class="text-xl font-semibold text-green-400 sm:text-2xl sm:leading-7 md:text-3xl">{{ event.results[0].name }}</h2>
+    </div>
+    <div class="col-start-1 row-start-2 px-4 sm:pb-4">
+      <div class="inline-flex space-x-4 mt-2">
+      <a :href="`/events/next/` + event.results[0].slug" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Info</a>
+    <span v-if="event.results[0].video_url" class="relative inline-flex rounded-md shadow-sm">
+        <a v-if="event.results[0].video_url" :href="event.results[0].video_url" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Watch Live</a>
+        <span class="flex absolute h-3 w-3 top-0 right-0 ">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+        </span>
+    </span> 
+      
+      </div>
+      <div class="flex items-center text-sm font-medium my-5 sm:mt-2 sm:mb-4"> </div>
+      <hr class="w-16 border-gray-300 dark:border-white hidden sm:block">
+    </div>
+    <div class="col-start-1 row-start-3 space-y-3 px-4 pb-4">
+      <p class="flex items-center text-black dark:text-white text-sm font-medium ">
+        {{ event.results[0].description }}
+      </p>
+      <Countdown :date="event.results[0].date" @onFinish="finish()"></Countdown>
+    </div>
+    <div class="col-start-1 row-start-1 flex sm:col-start-2 sm:row-span-3">
+      <div class="w-full grid grid-cols-3 grid-rows-2 gap-2">
+        <div class="relative col-span-3 row-span-2 md:col-span-3 ">
+          <img :src="event.results[0].feature_image" :alt="event.results[0].name" class="absolute inset-0 w-full h-full object-cover bg-gray-100 sm:rounded-lg rounded-xl md:shadow-lg lg:shadow-lg" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<br>
+
+<div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2 p-0 m-0">
+    <div v-for="i in 3" :key="i" >
+  	    <div v-for="event in events">
+            <div class="flex flex-col bg-gray-100 dark:bg-gray-700 rounded-lg m-2 shadow-lg">
+			    <div class="h-40 rounded-lg">
+                    <img :src="event.results[i].feature_image" alt="" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
+                </div>
+			<div class="flex flex-col items-start p-4 mt-2">
+                <div class="inline-flex space-x-4 mb-2 ">
+                    <a :href="`/events/next/` + event.results[i].slug" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Info</a>
+                        <span v-if="event.results[i].video_url" class="relative inline-flex rounded-md shadow-sm">
+                            <a v-if="event.results[i].video_url" :href="event.results[i].video_url" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Watch Live</a>
+                            <span class="flex absolute h-3 w-3 top-0 right-0 ">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                            </span>
+                        </span>              
+            </div>
+			<h4 class="text-xl font-semibold pb-3"> {{ event.results[i].name }}</h4>
+			<p class="text-sm"> {{ event.results[i].description }} </p>
+            <Countdown class="mt-2" :date="event.results[i].date" @onFinish="finish()"></Countdown>
+            </div>
+	        </div>
+        </div>
+    </div>
+</div>
 
 
 </div>
@@ -74,6 +268,7 @@
 <script>
 
 export default {
+
   head: {
     title: 'Spaceflight news - LiftoffTv',
     meta: [
@@ -106,25 +301,33 @@ export default {
  data() {
       return {
         launches: [],
-        newss: []
+        newss: [],
+        blogg: [],
+        events: []
+
       }
     },
     async fetch() {
-     // this.launches = await fetch(
-       // process.env.DOMAIN + '/api/launches/all' 
-     // ).then(res => res.json()),
+      this.launches = await fetch(
+          'https://beyond-apis.glitch.me/launch/api/v2/all' // process.env.DOMAIN + '/api/launches/all'
+      ).then(res => res.json()),
       this.newss = await fetch(
          'https://api.spaceflightnewsapi.net/v3/articles?_limit=5'
+      ).then(res => res.json()),
+      this.blogg = await fetch(
+         'https://api.spaceflightnewsapi.net/v3/blogs?_limit=5'
+      ).then(res => res.json()),
+      this.events = await fetch(
+          'https://beyond-apis.glitch.me/launch/api/v2/events' // process.env.DOMAIN + '/api/events'
       ).then(res => res.json())
     },
 
-
-
-
-
-
+    methods: {
+    finish() {
+      console.log('finish');
+    },
+  
 }
 
-
-
+}
 </script>

@@ -10,12 +10,7 @@ export default {
 
   buildModules: [
     '@nuxtjs/tailwindcss',
-  ],
-
-  modules: [
-    ['@nuxtjs/google-adsense', {
-      id: 'ca-pub-4670880031318337'
-    }]
+    '@nuxtjs/google-analytics'
   ],
 
   build: {
@@ -23,5 +18,9 @@ export default {
 
   serverMiddleware: {
     '/api': '~/api'
+  },
+
+  googleAnalytics: {
+    id: '285402647'
   }
 }
