@@ -1,11 +1,5 @@
 export default {
 
-  css: [
-  ],
-
-  plugins: [
-  ],
-
   components: true,
 
   buildModules: [

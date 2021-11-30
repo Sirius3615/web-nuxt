@@ -17,7 +17,7 @@
       <a :href="`/events/next/` + event.results[0].slug" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Info</a>
     <span v-if="event.results[0].video_url" class="relative inline-flex rounded-md shadow-sm">
         <a v-if="event.results[0].video_url" :href="event.results[0].video_url" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Watch Live</a>
-        <span class="flex absolute h-3 w-3 top-0 right-0 ">
+              <span class="flex absolute h-3 w-3 top-0 right-0 ">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
             <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
         </span>
@@ -59,7 +59,7 @@
                         <!-- Video url -->
                         <span v-if="event.results[i].video_url" class="relative inline-flex rounded-md shadow-sm">
                             <a v-if="event.results[i].video_url" :href="event.results[i].video_url" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Watch Live</a>
-                            <span class="flex absolute h-3 w-3 top-0 right-0 ">
+                             <span class="flex absolute h-3 w-3 top-0 right-0 ">
                                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                                 <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
                             </span>
