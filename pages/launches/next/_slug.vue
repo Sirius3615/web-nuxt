@@ -45,6 +45,27 @@
   </div>
 </div>
 
+<br><br>
+
+<div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2 p-0 m-0">
+
+		<div v-if="launched.launch_service_provider" class="flex flex-col bg-gray-100 dark:bg-gray-700 rounded-lg m-2 shadow-lg">
+			<div class="flex flex-col items-start p-4 mt-4">
+				<h4 class="text-xl font-semibold pb-3"> Launch Service Provider </h4>
+				<div class="text-sm"> 
+          <p> {{ launched.launch_service_provider.name }} </p>
+          <p><b>Type:</b> {{ launched.launch_service_provider.type }} </p>
+          <p><b>Description:</b> {{ launched.launch_service_provider.description }} </p>
+          <p><b>Administrator:</b> {{ launched.launch_launch_service_provider.administrator }} </p> 
+          <p><b>Founding year:</b> {{ launched.launch_service_provider.founding_year }} </p>
+          <p><b>Spacecraft:</b> {{ launched.launch_launch_service_provider.spacecraft }} </p>
+
+<!-- for some reason it cant read administrator and spacecraft form data -->
+        </div>
+      </div>
+	  </div>
+
+</div>
 
 
 <br>
@@ -57,7 +78,7 @@
   <Footer/>
 </div>
 </template>
-
+ 
 <script>
 
 export default {
@@ -69,7 +90,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       // Facebook 
-      { name: 'og:site _name', content: 'LiftoffTv' }, // using dynamic things in meta tags
+      { name: 'og:site _name', content: 'LiftoffTv' }, 
       { name: 'og:title', content: this.launched.name + ' - LiftoffTv' }, 
       { name: 'og:description', content: this.launched.mission.description },
       { name: 'og:image', content: this.launched.image },
