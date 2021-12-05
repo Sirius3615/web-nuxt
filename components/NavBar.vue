@@ -4,8 +4,8 @@
         <nav class="flex items-center justify-between flex-wrap">
             <NuxtLink to="/">
             <div class="flex items-center flex-no-shrink mr-6 text-black dark:text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" fill="#00FF7F" class="bi bi-play-fill" viewBox="0 0 16 16"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
-                <span class="font-semibold text-xl tracking-tight">LiftoffTv</span>
+                <img src="/static/icon.png" alt="logo" width="35" height="35" class="object-cover"> <!-- Logo not showing -->
+                <span class="font-semibold text-xl tracking-tight">BSN</span>
             </div>
             </NuxtLink>
             <div class="block sm:hidden">
@@ -15,16 +15,16 @@
             </div>
             <div id="main-nav" class="w-full flex-grow sm:flex items-center sm:w-auto hidden">
                 <div class="text-sm sm:flex-grow">
-                    <NuxtLink to="news" class="no-underline font-bold block mt-4 sm:inline-block sm:mt-0 mr-4">
+                    <NuxtLink to="/news" class="no-underline font-bold block mt-4 sm:inline-block sm:mt-0 mr-4">
                         News
                     </NuxtLink>
-                    <NuxtLink to="launches" class="no-underline font-bold block mt-4 sm:inline-block sm:mt-0 mr-4">
+                    <NuxtLink to="/launches" class="no-underline font-bold block mt-4 sm:inline-block sm:mt-0 mr-4">
                         Launches
                     </NuxtLink>
-                    <NuxtLink to="blog" class="no-underline font-bold block mt-4 sm:inline-block sm:mt-0 mr-4">
+                    <NuxtLink to="/blog" class="no-underline font-bold block mt-4 sm:inline-block sm:mt-0 mr-4">
                         Blog
                     </NuxtLink>
-                    <NuxtLink to="events" class="no-underline font-bold block mt-4 sm:inline-block sm:mt-0 mr-4">
+                    <NuxtLink to="/events" class="no-underline font-bold block mt-4 sm:inline-block sm:mt-0 mr-4">
                         Events
                     </NuxtLink>
                 </div>

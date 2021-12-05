@@ -4,7 +4,8 @@ export default {
 
   buildModules: [
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    '@nuxtjs/pwa'
   ],
 
   build: {
@@ -16,5 +17,13 @@ export default {
 
   googleAnalytics: {
     id: '285402647'
+  },
+
+  pwa: {
+    manifest: {
+      name: 'BSN',
+      lang: 'en',
+      useWebmanifestExtension: false
+    }
   }
 }

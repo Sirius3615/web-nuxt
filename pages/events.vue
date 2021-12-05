@@ -89,23 +89,23 @@
 export default {
 
   head: {
-    title: 'Events - LiftoffTv',
+    title: 'Events - BSN',
     meta: [
       // Basic meta tags
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       // Facebook 
-      { name: 'og:site _name', content: 'LiftoffTv' },
-      { name: 'og:title', content: 'Events - LiftoffTv' },
+      { name: 'og:site _name', content: 'BSN' },
+      { name: 'og:title', content: 'Events - BSN' },
       { name: 'og:description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
       // Twitter
-      { name: 'twitter:title', content: 'Events - LiftoffTv' },
+      { name: 'twitter:title', content: 'Events - BSN' },
       { name: 'twitter:description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
       // SEO
-      { name: 'title', content: 'Events - LiftoffTv' },
+      { name: 'title', content: 'Events - BSN' },
       { name: 'description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
       { name: 'keywords', content: 'rocket, events, news, spaceflight, nasa, spacex, starship, astronomy, apod, liftoff, tv, space' },
-      { name: 'author', content: 'LiftoffTv' },
+      { name: 'author', content: 'BSN' },
       { name: 'robots', content: 'index, follow' },
       { name: 'language', content: 'English' },
       { name: 'revisit-after', content: '1 days' },

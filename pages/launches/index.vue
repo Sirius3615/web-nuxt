@@ -94,23 +94,23 @@
 export default {
 
   head: {
-    title: 'Launches - LiftoffTv',
+    title: 'Launches - BSN',
     meta: [
       // Basic meta tags
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       // Facebook 
-      { name: 'og:site _name', content: 'LiftoffTv' },
-      { name: 'og:title', content: 'Launches - LiftoffTv' },
+      { name: 'og:site _name', content: 'BSN' },
+      { name: 'og:title', content: 'Launches - BSN' },
       { name: 'og:description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
       // Twitter
-      { name: 'twitter:title', content: 'Launches - LiftoffTv' },
+      { name: 'twitter:title', content: 'Launches - BSN' },
       { name: 'twitter:description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
       // SEO
-      { name: 'title', content: 'Launches - LiftoffTv' },
+      { name: 'title', content: 'Launches - BSN' },
       { name: 'description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
       { name: 'keywords', content: 'rocket, launches, news, spaceflight, nasa, spacex, starship, astronomy, apod, liftoff, tv, space' },
-      { name: 'author', content: 'LiftoffTv' },
+      { name: 'author', content: 'BSN' },
       { name: 'robots', content: 'index, follow' },
       { name: 'language', content: 'English' },
       { name: 'revisit-after', content: '1 days' },

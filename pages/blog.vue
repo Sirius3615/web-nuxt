@@ -64,23 +64,23 @@
 export default {
 
   head: {
-    title: 'Blog - LiftoffTv',
+    title: 'Blog - BSN',
     meta: [
       // Basic meta tags
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       // Facebook 
-      { name: 'og:site _name', content: 'LiftoffTv' },
-      { name: 'og:title', content: 'Blog - LiftoffTv' },
+      { name: 'og:site _name', content: 'BSN' },
+      { name: 'og:title', content: 'Blog - BSN' },
       { name: 'og:description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
       // Twitter
-      { name: 'twitter:title', content: 'Blog - LiftoffTv' },
+      { name: 'twitter:title', content: 'Blog - BSN' },
       { name: 'twitter:description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
       // SEO
-      { name: 'title', content: 'Blog - LiftoffTv' },
+      { name: 'title', content: 'Blog - BSN' },
       { name: 'description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
       { name: 'keywords', content: 'rocket, launches, news, spaceflight, nasa, spacex, starship, astronomy, apod, liftoff, tv, space' },
-      { name: 'author', content: 'LiftoffTv' },
+      { name: 'author', content: 'BSN' },
       { name: 'robots', content: 'index, follow' },
       { name: 'language', content: 'English' },
       { name: 'revisit-after', content: '1 days' },

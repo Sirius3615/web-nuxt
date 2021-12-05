@@ -129,16 +129,6 @@ app.get("/api/launches/all", (req, res, next) => {
   console.log('Requested')
 });
 
-app.get("/api/launches/:slug", (req, res, next) => {
-  const launches = store.get('launch_list')
-
-  const launched = launches[0].results.find(
-    (obj) => obj.slug === req.params.slug);
-  
-    res.send(launched)
-   console.log('Requested')
- });
-
 //space events
 app.get("/api/events/all", (req, res, next) => {
  const space_events = store.get('events_list')
@@ -209,6 +199,18 @@ app.get("/api/staff",(req, res, next) => {
 
   
  
+
+    app.get("/api/launches/:slug", (req, res, next) => {
+      const launches = store.get('launch_list')
+    
+      const launched = launches[0].results.find(
+        (obj) => obj.slug === req.params.slug);
+      
+        res.send(launched)
+       console.log('Requested')
+     });
+
+     
 //============
 // LISTENER 
 

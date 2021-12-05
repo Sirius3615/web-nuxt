@@ -45,8 +45,6 @@
   </div>
 </div>
 
-<br><br>
-
 <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2 p-0 m-0 ">
 
 <!-- Launch service provider -->
@@ -141,7 +139,20 @@
       </div>
 	  </div>
 
-
+<!-- Location  -->
+<div v-if="launched.pad.location" class="flex flex-col bg-gray-100 dark:bg-gray-700 rounded-lg m-2 shadow-lg">
+  <div class="h-40 rounded-lg">
+        <img :src="launched.pad.location.map_image" :alt="launched.pad.location.name" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
+        </div>
+			<div class="flex flex-col items-start p-4 mt-2">
+		  <h4 class="text-xl font-semibold pb-3"> Pad</h4>
+				<div class="text-sm space-y-2"> 
+          <p class="font-semibold text-lg"> {{ launched.pad.location.name }} </p>
+          <p><b>Total Launches:</b> {{ launched.pad.location.total_launch_count }} </p>
+       
+        </div>
+      </div>
+	  </div>
 
 
 
@@ -169,26 +180,26 @@
 export default {
   head() {
     return {
-    title: 'Launches - LiftoffTv',
+    title: 'Launches - BSN',
     meta: [
       // Basic meta tags
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       // Facebook 
-      { name: 'og:site _name', content: 'LiftoffTv' }, 
-      { name: 'og:title', content: this.launched.name + ' - LiftoffTv' }, 
+      { name: 'og:site _name', content: 'BSN' }, 
+      { name: 'og:title', content: this.launched.name + ' - BSN' }, 
       { name: 'og:description', content: this.launched.mission.description },
       { name: 'og:image', content: this.launched.image },
       // Twitter
-      { name: 'twitter:title', content: this.launched.name + ' - LiftoffTv' },
+      { name: 'twitter:title', content: this.launched.name + ' - BSN' },
       { name: 'twitter:description', content: this.launched.mission.description },
       { name: 'twitter:image', content: this.launched.image },
       { name: 'twitter:card', content: 'summary_large_image' }, 
       // SEO
-      { name: 'title', content: this.launched.name + ' - LiftoffTv' },
+      { name: 'title', content: this.launched.name + ' - BSN' },
       { name: 'description', content: this.launched.mission.description },
       { name: 'keywords', content: 'rocket, launches, news, spaceflight, nasa, spacex, starship, astronomy, apod, liftoff, tv, space' },
-      { name: 'author', content: 'LiftoffTv' },
+      { name: 'author', content: 'BSN' },
       { name: 'robots', content: 'index, follow' },
       { name: 'language', content: 'English' },
       { name: 'revisit-after', content: '1 days' },
