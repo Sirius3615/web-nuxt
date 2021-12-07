@@ -215,7 +215,7 @@ app.get("/api/staff",(req, res, next) => {
 // LISTENER 
 
 
-const listener = app.listen(3000, () => {
-  console.log("API is listening on port 3000" );
+const listener = app.listen(8080, () => {
+  console.log("API is listening on port 8080" );
 });
 
