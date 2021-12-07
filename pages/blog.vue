@@ -87,8 +87,8 @@ export default {
 
     ],
    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/static/favicon.png' },
-      { rel: 'shortcut icon', type: 'image/x-icon', href: '/static/favicon.png' },
+      { rel: 'icon', type: 'image/x-icon', href: '/icon.png' },
+      { rel: 'shortcut icon', type: 'image/x-icon', href: '/icon.png' },
         ]
   },
 

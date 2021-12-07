@@ -91,8 +91,8 @@ export default {
 
     ],
    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/static/favicon.png' },
-      { rel: 'shortcut icon', type: 'image/x-icon', href: '/static/favicon.png' },
+      { rel: 'icon', type: 'image/x-icon', href: '/icon.png' },
+      { rel: 'shortcut icon', type: 'image/x-icon', href: '/icon.png' },
         ]
   },
 
@@ -104,7 +104,7 @@ export default {
     },
     async fetch() {
       this.newss = await fetch(
-         'https://api.spaceflightnewsapi.net/v3/articles?_limit=7'
+         'https://api.spaceflightnewsapi.net/v3/articles?_limit=15'
       ).then(res => res.json())
     },
 

@@ -4,7 +4,7 @@
         <nav class="flex items-center justify-between flex-wrap">
             <NuxtLink to="/">
             <div class="flex items-center flex-no-shrink mr-6 text-black dark:text-white">
-                <img src="/static/icon.png" alt="logo" width="35" height="35" class="object-cover"> <!-- Logo not showing -->
+                <img src="/icon.png" alt="logo" width="40" height="40" class="object-cover"> <!-- Logo not showing -->
                 <span class="font-semibold text-xl tracking-tight">BSN</span>
             </div>
             </NuxtLink>

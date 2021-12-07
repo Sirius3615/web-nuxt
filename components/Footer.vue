@@ -6,7 +6,7 @@
         <div class="flex flex-wrap justify-center">
           <ul class="flex items-center space-x-4">
             <li><NuxtLink to="/">Home</NuxtLink></li>
-            <li><NuxtLink to="privacy">Privacy</NuxtLink></li>
+            <li><a href="https://www.privacypolicies.com/live/36122dc9-9342-405e-b5cf-f1f9d2f709cb">Privacy</a></li>
             <li><a href="mailto:support@beyondspacenews.com">Email</a></li>
           </ul>
         </div>

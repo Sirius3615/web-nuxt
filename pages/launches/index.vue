@@ -19,7 +19,7 @@
       <a :href="`/launches/next/` + launch.results[0].slug" class="flex-1 w-14 bg-green-300 dark:bg-green-500  font-bold py-2 px-4 rounded-full " v-if="launch.results[0].status.abbrev === 'Go'"> {{ launch.results[0].status.abbrev }}</a>
       <a :href="`/launches/next/` + launch.results[0].slug" class="flex-1 w-14 bg-yellow-400 dark:bg-yellow-400  font-bold py-2 px-3 rounded-full " v-else> {{ launch.results[0].status.abbrev }}</a>
       <a :href="`/launches/next/` + launch.results[0].slug" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Info</a>
-    <span v-if="launch.results[0].vidURLs[0]" class="relative inline-flex rounded-md shadow-sm">
+    <span v-if="launch.results[0].vidURLs[0]" class="relative inline-flex rounded-full shadow-sm">
         <a v-if="launch.results[0].vidURLs[0]" :href="launch.results[0].vidURLs[0].url" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Watch Live</a>
         <span v-if="launch.results[0].webcast_live === true" class="flex absolute h-3 w-3 top-0 right-0 ">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
@@ -62,7 +62,7 @@
                     <a :href="`/launches/next/` + launch.results[i].slug" class="flex-1 w-14 bg-green-300 dark:bg-green-500  font-bold py-2 px-4 rounded-full " v-if="launch.results[i].status.abbrev === 'Go'"> {{ launch.results[i].status.abbrev }}</a>
                     <a :href="`/launches/next/` + launch.results[i].slug" class="flex-1 w-14 bg-yellow-400 dark:bg-yellow-400  font-bold py-2 px-3 rounded-full " v-else> {{ launch.results[i].status.abbrev }}</a>
                     <a :href="`/launches/next/` + launch.results[i].slug" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Info</a>
-                        <span v-if="launch.results[i].vidURLs[0]" class="relative inline-flex rounded-md shadow-sm">
+                        <span v-if="launch.results[i].vidURLs[0]" class="relative inline-flex rounded-full shadow-sm">
                             <a v-if="launch.results[i].vidURLs[0]" :href="launch.results[i].vidURLs[0].url" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Watch Live</a>
                             <span v-if="launch.results[0].webcast_live === true" class="flex absolute h-3 w-3 top-0 right-0 ">
                                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
@@ -117,8 +117,8 @@ export default {
 
     ],
    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/static/favicon.png' },
-      { rel: 'shortcut icon', type: 'image/x-icon', href: '/static/favicon.png' },
+      { rel: 'icon', type: 'image/x-icon', href: '/icon.png' },
+      { rel: 'shortcut icon', type: 'image/x-icon', href: '/icon.png' },
         ]
   },
 
@@ -138,7 +138,7 @@ export default {
       console.log('finish');
     },
   
-}
+} 
 
 }
 </script>

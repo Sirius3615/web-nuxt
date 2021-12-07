@@ -17,7 +17,7 @@
 
       <a :href="`/launches/next/` + launched.slug" class="flex-1 w-14 bg-green-300 dark:bg-green-500  font-bold py-2 px-4 rounded-full " v-if="launched.status.abbrev === 'Go'"> {{ launched.status.abbrev }}</a>
       <a :href="`/launches/next/` + launched.slug" class="flex-1 w-14 bg-yellow-400 dark:bg-yellow-400  font-bold py-2 px-3 rounded-full " v-else> {{ launched.status.abbrev }}</a>
-      <span v-if="launched.vidURLs[0]" class="relative inline-flex rounded-md shadow-sm">
+      <span v-if="launched.vidURLs[0]" class="relative inline-flex rounded-full shadow-sm">
         <a v-if="launched.vidURLs[0]" :href="launched.vidURLs[0].url" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Watch Live</a>
         <span v-if="launched.webcast_live === true" class="flex absolute h-3 w-3 top-0 right-0 ">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
@@ -44,6 +44,8 @@
     </div>
   </div>
 </div>
+
+<br><br>
 
 <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2 p-0 m-0 ">
 
@@ -154,20 +156,57 @@
       </div>
 	  </div>
 
-
-
-
-
-
-
-
-
-
 </div>
+<br>
+<br>
+
+<h4 v-if="launched.rocket.spacecraft_stage" class="ml-2 text-3xl font-semibold">
+  Crew:
+</h4>
+<br>
+<div v-if="launched.rocket.spacecraft_stage" class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2 p-0 m-3 ">
+
+<div v-for="crew in launched.rocket.spacecraft_stage.launch_crew">
+
+<!-- Crew member  -->
+<div class="flex flex-col bg-gray-100 dark:bg-gray-700 rounded-lg m-3 shadow-lg">
+  <div class="h-70 rounded-lg">
+        <img :src="crew.astronaut.profile_image" :alt="crew.astronaut.name" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
+        </div>
+			<div class="flex flex-col items-start p-4 mt-1">
+      <div class="inline-flex space-x-4 mt-2 mb-2">
+            <a v-if="crew.astronaut.twitter" :href="crew.astronaut.twitter" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Twitter</a>
+            <a v-if="crew.astronaut.instagram" :href="crew.astronaut.instagram" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Instagram</a>
+            <a v-if="crew.astronaut.wiki" :href="crew.astronaut.wiki" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Wiki</a>
+        </div>
+		  <h4 class="text-xl font-semibold pb-3"> {{ crew.astronaut.name }} </h4>
+				<div class="text-sm space-y-2"> 
+          <p> {{ crew.astronaut.bio }} </p>
+          <p><b>Date of Birth:</b> {{ crew.astronaut.date_of_birth}} </p>
+          <p><b>Role:</b> {{crew.role.role }} </p>
+          <p><b>Type:</b> {{ crew.astronaut.type.name }} </p>
+          <p><b>Status:</b> {{ crew.astronaut.status.name }} </p>
+          <p><b>Agency:</b> {{ crew.astronaut.agency.name }} </p>
+        </div>
+      </div>
+	  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
 <br>
 <Ad/>
 <br>
 
+<div class="comments">
+    <Disqus />
+  </div>
 
 </div>
 
@@ -206,8 +245,8 @@ export default {
 
     ],
    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/static/favicon.png' },
-      { rel: 'shortcut icon', type: 'image/x-icon', href: '/static/favicon.png' },
+      { rel: 'icon', type: 'image/x-icon', href: '/icon.png' },
+      { rel: 'shortcut icon', type: 'image/x-icon', href: '/icon.png' },
         ]
   }
   },

@@ -20,7 +20,7 @@
       <a :href="`/launches/next/` + launch.results[0].slug" class="flex-1 w-14 bg-yellow-400 dark:bg-yellow-400  font-bold py-2 px-3 rounded-full " v-else> {{ launch.results[0].status.abbrev }}</a>
       <a :href="`/launches/next/` + launch.results[0].slug" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Info</a>
           
-          <span v-if="launch.results[0].vidURLs[0]" class="relative inline-flex rounded-md shadow-sm">
+          <span v-if="launch.results[0].vidURLs[0]" class="relative inline-flex rounded-full shadow-sm">
               <a v-if="launch.results[0].vidURLs[0]" :href="launch.results[0].vidURLs[0].url" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Watch Live</a>
               <span v-if="launch.results[0].webcast_live === true" class="flex absolute h-3 w-3 top-0 right-0 ">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
@@ -199,7 +199,7 @@
     </div>
     <div class="col-start-1 row-start-2 px-4 sm:pb-4">
       <div class="inline-flex space-x-4 mt-2">
-      <a :href="`/events/next/` + event.results[0].slug" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Info</a>
+      <!-- <a :href="`/events/next/` + event.results[0].slug" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Info</a> -->
     <span v-if="event.results[0].video_url" class="relative inline-flex rounded-md shadow-sm">
         <a v-if="event.results[0].video_url" :href="event.results[0].video_url" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Watch Live</a>
         <span class="flex absolute h-3 w-3 top-0 right-0 ">
@@ -240,7 +240,7 @@
                 </div>
 			<div class="flex flex-col items-start p-4 mt-2">
                 <div class="inline-flex space-x-4 mb-2 ">
-                    <a :href="`/events/next/` + event.results[i].slug" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Info</a>
+                   <!-- <a :href="`/events/next/` + event.results[i].slug" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Info</a> -->
                         <span v-if="event.results[i].video_url" class="relative inline-flex rounded-md shadow-sm">
                             <a v-if="event.results[i].video_url" :href="event.results[i].video_url" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Watch Live</a>
                             <span class="flex absolute h-3 w-3 top-0 right-0 ">
@@ -293,8 +293,8 @@ export default {
 
     ],
    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/static/favicon.png' },
-      { rel: 'shortcut icon', type: 'image/x-icon', href: '/static/favicon.png' },
+      { rel: 'icon', type: 'image/x-icon', href: '/icon.png' },
+      { rel: 'shortcut icon', type: 'image/x-icon', href: '/icon.png' },
         ]
   },
 
