@@ -215,7 +215,7 @@ app.get("/api/staff",(req, res, next) => {
 // LISTENER 
 
 
-const listener = app.listen(8080, () => {
-  console.log("API is listening on port " + listener.address().port );
+const listener = app.listen(process.env.PORT || 8080, () => {
+  console.log("API is listening on port " + process.env.PORT );
 });
 
