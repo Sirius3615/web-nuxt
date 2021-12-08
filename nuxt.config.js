@@ -16,9 +16,9 @@ export default {
   build: {
   },
 
-  serverMiddleware: {
-    '/api': '~/api'
-  },
+  //serverMiddleware: {
+  //  '/api': '~/api'
+ // },
 
   googleAnalytics: {
     id: '285402647'
