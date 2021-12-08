@@ -24,9 +24,17 @@ export default {
 
   pwa: {
     manifest: {
-      name: 'BSN',
+      name: 'BeyondSpaceNews',
       lang: 'en',
-      useWebmanifestExtension: false
+      description: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.',
+      theme_color: '#34D399',
+      start_url: 'https://beyondspacenews.com/',
+      short_name: 'BSN',
+      useWebmanifestExtension: false,
+      display: 'standalone'
+    },
+    meta: {
+      /* meta options */
     }
   }
 }
