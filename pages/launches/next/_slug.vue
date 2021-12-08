@@ -221,19 +221,19 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'theme-color', content: '#34D399' },
       // Facebook 
-       { hid: 'og:site_name', name: 'og:site_name', content: 'BSN' },
+      { hid: 'og:site_name', name: 'og:site_name', content: 'BSN' },
       { hid: 'og:type', name: 'og:type', content: 'website' },
       { hid: 'og:title', name: 'og:title', content: this.launched.name + ' - BSN' }, 
-      { hid: 'description', property: 'og:description', content:' Get all information about the launch!' },
+      { hid: 'description', property: 'og:description', content: "Get latest information about the launch!" },
       { name: 'og:image', content: this.launched.image },
       // Twitter
       { hid: 'twitter:title', name: 'twitter:title', content: this.launched.name + ' - BSN' },
-      { hid: 'description', property: 'twitter:description', content: ' Get all information about the launch!' },
+      { hid: 'twitter:description', property: 'twitter:description', content: "Get latest information about the launch!" },
       { name: 'twitter:image', content: this.launched.image },
       { name: 'twitter:card', content: 'summary_large_image' }, 
       // SEO
       { hid: 'title', name: 'title', content: this.launched.name + ' - BSN' },
-      { hid: 'description', name: 'description', content: ' Get all information about the launch!' },
+      { hid: 'description', name: 'description', content: "Get latest information about the launch!" },
       { hid: 'keywords', name: 'keywords', content: 'rocket, launches, news, spaceflight, nasa, spacex, starship, astronomy, apod, liftoff, tv, space' },
       { hid: 'author', name: 'author', content: 'BSN' },
       { hid: 'robots', name: 'robots', content: 'index, follow' },
@@ -251,8 +251,7 @@ export default {
  data() {
       return {
         page_slug: this.$route.params.slug,
-        launched: []
-      }
+        launched: []      }
     },
 
 

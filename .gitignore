@@ -91,4 +91,6 @@ sw.*
 
 # acPU9IM
 
-/api/index.js
+/api
+/api/index.*
+
