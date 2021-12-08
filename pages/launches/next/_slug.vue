@@ -219,6 +219,7 @@ export default {
       // Basic meta tags
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'theme-color', content: '#34D399' },
       // Facebook 
       { name: 'og:site _name', content: 'BSN' }, 
       { name: 'og:title', content: this.launched.name + ' - BSN' }, 
