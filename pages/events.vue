@@ -124,7 +124,7 @@ export default {
     },
     async fetch() {
       this.events = await fetch(
-          'http://10.244.30.244:8080/api/events'
+          'https://beyond-apis.glitch.me/launch/api/v2/events' // process.env.DOMAIN + '/api/events'
       ).then(res => res.json())
     },
 

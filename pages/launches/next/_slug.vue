@@ -174,7 +174,7 @@
         <img :src="crew.astronaut.profile_image" :alt="crew.astronaut.name" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
         </div>
 			<div class="flex flex-col items-start p-4 mt-1">
-      <div class="inline-flex space-x-4 mt-2 mb-2">
+      <div class="inline-flex space-x-2 mt-2 mb-2">
             <a v-if="crew.astronaut.twitter" :href="crew.astronaut.twitter" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Twitter</a>
             <a v-if="crew.astronaut.instagram" :href="crew.astronaut.instagram" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Instagram</a>
             <a v-if="crew.astronaut.wiki" :href="crew.astronaut.wiki" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Wiki</a>
