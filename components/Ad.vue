@@ -38,7 +38,7 @@ export default {
       this.$nextTick(() => {
         try {
           // this is required for each ad slot (calling this once will only load 1 ad)
-          (window.adsbygoogle = window.adsbygoogle || []).push({})
+          (adsbygoogle = window.adsbygoogle || []).push({})
         } catch (error) {
           console.error(error)
         }
