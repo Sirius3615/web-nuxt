@@ -86,7 +86,10 @@
 </div>
 
 <br>
+<div class="w-full">
+<div class="w-full">
 <adsbygoogle page-url="https://beyondspacenews.com/"/>
+</div></div>
 <br>
 
 <!-- News -->
@@ -137,8 +140,9 @@
 </div>
 
 <br>
+<div class="w-full">
 <adsbygoogle page-url="https://beyondspacenews.com/"/>
-
+</div>
 <br>
 
 <!-- Blog -->
@@ -188,8 +192,9 @@
 </div>
 
 <br>
+<div class="w-full">
 <adsbygoogle page-url="https://beyondspacenews.com/"/>
-
+</div>
 <br> 
 
 <!-- events -->

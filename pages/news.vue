@@ -54,8 +54,9 @@
 </div>
 
 <br>
+<div class="w-full">
 <adsbygoogle page-url="https://beyondspacenews.com/"/>
-
+</div>
 <br>
 
 </div>
