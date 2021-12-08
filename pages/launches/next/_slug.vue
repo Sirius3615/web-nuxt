@@ -223,7 +223,6 @@ export default {
       // Facebook 
        { hid: 'og:site_name', name: 'og:site_name', content: 'BSN' },
       { hid: 'og:type', name: 'og:type', content: 'website' },
-      { hid: 'og:image', name: 'og:image', content: '/icon.png' }, 
       { hid: 'og:title', name: 'og:title', content: this.launched.name + ' - BSN' }, 
       { hid: 'description', property: 'og:description', content:' Get all information about the launch!' },
       { name: 'og:image', content: this.launched.image },
