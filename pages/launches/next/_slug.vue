@@ -204,10 +204,6 @@
 <Ad/>
 <br>
 
-<div class="comments">
-    <Disqus />
-  </div>
-
 </div>
 
   <Footer/>
