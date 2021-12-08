@@ -45,7 +45,11 @@
   </div>
 </div>
 
-<br><br>
+<br>
+<div class=" place-items-center w-full">
+<adsbygoogle page-url="https://beyondspacenews.com/"/>
+</div>
+<br>
 
 <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2 p-0 m-0 ">
 
@@ -192,13 +196,6 @@
 	  </div>
 </div>
 </div>
-
-
-
-
-
-
-
 
 <br>
 <div class=" place-items-center w-full">
