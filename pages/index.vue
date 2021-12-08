@@ -188,7 +188,7 @@
 
 <br>
 <adsbygoogle />
-<br>
+<br> 
 
 <!-- events -->
 <div v-for="event in events">
