@@ -59,7 +59,7 @@
     
 		<div class="flex flex-col bg-gray-100 dark:bg-gray-700 rounded-lg m-2 shadow-lg">
 			<div class="h-40 rounded-lg">
-       <img :src="launch.results[i].image" alt="" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
+       <img :src="launch.results[i].image" :alt="launch.results[i].name" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
       </div>
 			<div class="flex flex-col items-start p-4 mt-2">
           <div class="inline-flex space-x-4 mb-2 ">
@@ -127,7 +127,7 @@
 	<div v-for="news in newss.slice(1, 4)">
 		<div class="flex flex-col bg-gray-100 dark:bg-gray-700 rounded-lg m-2 shadow-lg">
 			<div class="h-40 rounded-lg">
-       <img :src="news.imageUrl" alt="" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
+       <img :src="news.imageUrl" :alt="news.title" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
       </div>
 			<div class="flex flex-col items-start p-4 mt-4">
 				<a :href="news.url"><h4 class="text-xl font-semibold pb-3"> {{ news.title }}</h4></a>
@@ -179,7 +179,7 @@
 	<div v-for="blog in blogg.slice(1, 4)">
 		<div class="flex flex-col bg-gray-100 dark:bg-gray-700 rounded-lg m-2 shadow-lg">
 			<div class="h-40 rounded-lg">
-       <img :src="blog.imageUrl" alt="" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
+       <img :src="blog.imageUrl" :alt="blog.title" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
       </div>
 			<div class="flex flex-col items-start p-4 mt-4">
 				<a :href="blog.url"><h4 class="text-xl font-semibold pb-3"> {{ blog.title }}</h4></a>
@@ -242,7 +242,7 @@
   	    <div v-for="event in events">
             <div class="flex flex-col bg-gray-100 dark:bg-gray-700 rounded-lg m-2 shadow-lg">
 			    <div class="h-40 rounded-lg">
-                    <img :src="event.results[i].feature_image" alt="" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
+                    <img :src="event.results[i].feature_image" :alt="event.results[i].name" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
                 </div>
 			<div class="flex flex-col items-start p-4 mt-2">
                 <div class="inline-flex space-x-4 mb-2 ">
@@ -283,9 +283,11 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'theme-color', content: '#34D399' },
       // Facebook 
-      { hid: 'og:site_name', name: 'og:site_name', content: 'BSN' },
+       { hid: 'og:site_name', name: 'og:site_name', content: 'BSN' },
+      { hid: 'og:type', name: 'og:type', content: 'website' },
+      { hid: 'og:image', name: 'og:image', content: '/icon.png' },
       { hid: 'og:title', name: 'og:title', content: 'Spaceflight news - BSN' },
-      { hid: 'description', name: 'og:description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
+      { hid: 'og:description', name: 'og:description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
       // Twitter
       { hid: 'twitter:title', name: 'twitter:title', content: 'Spaceflight news - BSN' },
       { hid: 'twitter:description', name: 'twitter:description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },

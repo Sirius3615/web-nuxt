@@ -55,7 +55,7 @@
   	    <div v-for="launch in launches">
             <div class="flex flex-col bg-gray-100 dark:bg-gray-700 rounded-lg m-2 shadow-lg">
 			    <div class="h-40 rounded-lg">
-                    <img :src="launch.results[i].image" alt="" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
+                    <img :src="launch.results[i].image" :alt="launch.results[i].name" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
                 </div>
 			<div class="flex flex-col items-start p-4 mt-2">
                 <div class="inline-flex space-x-4 mb-2 ">
@@ -103,9 +103,11 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'theme-color', content: '#34D399' },
       // Facebook 
-      { hid: 'og:site_name', name: 'og:site_name', content: 'BSN' },
+       { hid: 'og:site_name', name: 'og:site_name', content: 'BSN' },
+      { hid: 'og:type', name: 'og:type', content: 'website' },
+      { hid: 'og:image', name: 'og:image', content: '/icon.png' },
       { hid: 'og:title', name: 'og:title', content: 'Launches - BSN' },
-      { hid: 'description', name: 'og:description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
+      { hid: 'og:description', name: 'og:description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
       // Twitter
       { hid: 'twitter:title', name: 'twitter:title', content: 'Launches - BSN' },
       { hid: 'twitter:description', name: 'twitter:description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
