@@ -104,13 +104,13 @@ export default {
       // Facebook 
       { name: 'og:site _name', content: 'BSN' },
       { name: 'og:title', content: 'Launches - BSN' },
-      { name: 'og:description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
+      { hid: 'description', name: 'og:description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
       // Twitter
       { name: 'twitter:title', content: 'Launches - BSN' },
-      { name: 'twitter:description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
+      { hid: 'description', name: 'twitter:description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
       // SEO
       { name: 'title', content: 'Launches - BSN' },
-      { name: 'description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
+      { hid: 'description', name: 'description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
       { name: 'keywords', content: 'rocket, launches, news, spaceflight, nasa, spacex, starship, astronomy, apod, liftoff, tv, space' },
       { name: 'author', content: 'BSN' },
       { name: 'robots', content: 'index, follow' },

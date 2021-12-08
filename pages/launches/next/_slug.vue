@@ -222,16 +222,16 @@ export default {
       // Facebook 
       { name: 'og:site _name', content: 'BSN' }, 
       { name: 'og:title', content: this.launched.name + ' - BSN' }, 
-      { name: 'og:description', content:' Get all information about the lounch!' },
+      { hid: 'description', name: 'og:description', content:' Get all information about the launch!' },
       { name: 'og:image', content: this.launched.image },
       // Twitter
       { name: 'twitter:title', content: this.launched.name + ' - BSN' },
-      { name: 'twitter:description', content: ' Get all information about the lounch!' },
+      { hid: 'description', name: 'twitter:description', content: ' Get all information about the launch!' },
       { name: 'twitter:image', content: this.launched.image },
       { name: 'twitter:card', content: 'summary_large_image' }, 
       // SEO
       { name: 'title', content: this.launched.name + ' - BSN' },
-      { name: 'description', content: ' Get all information about the lounch!' },
+      { hid: 'description', name: 'description', content: ' Get all information about the launch!' },
       { name: 'keywords', content: 'rocket, launches, news, spaceflight, nasa, spacex, starship, astronomy, apod, liftoff, tv, space' },
       { name: 'author', content: 'BSN' },
       { name: 'robots', content: 'index, follow' },
