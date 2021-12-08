@@ -201,7 +201,8 @@
 
 
 <br>
-<adsbygoogle />
+<adsbygoogle page-url="https://beyondspacenews.com/"/>
+
 <br>
 
 </div>

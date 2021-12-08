@@ -86,7 +86,7 @@
 </div>
 
 <br>
-<adsbygoogle />
+<adsbygoogle page-url="https://beyondspacenews.com/"/>
 <br>
 
 <!-- News -->
@@ -137,7 +137,8 @@
 </div>
 
 <br>
-<adsbygoogle />
+<adsbygoogle page-url="https://beyondspacenews.com/"/>
+
 <br>
 
 <!-- Blog -->
@@ -187,7 +188,8 @@
 </div>
 
 <br>
-<adsbygoogle />
+<adsbygoogle page-url="https://beyondspacenews.com/"/>
+
 <br> 
 
 <!-- events -->
