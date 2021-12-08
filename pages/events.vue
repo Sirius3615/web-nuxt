@@ -75,7 +75,7 @@
 </div>
 
 <br>
-<div class="w-full">
+<div class=" place-items-center w-full">
 <adsbygoogle page-url="https://beyondspacenews.com/"/>
 </div>
 <br>
