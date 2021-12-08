@@ -75,7 +75,7 @@
 </div>
 
 <br>
-<Ad/>
+<adsbygoogle />
 <br>
 
 </div>

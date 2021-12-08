@@ -5,7 +5,10 @@ export default {
   buildModules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-analytics',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    ['@nuxtjs/google-adsense', {
+      id: 'ca-pub-4670880031318337'
+    }]
   ],
 
   build: {

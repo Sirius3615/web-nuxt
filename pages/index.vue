@@ -86,7 +86,7 @@
 </div>
 
 <br>
-<Ad/>
+<adsbygoogle />
 <br>
 
 <!-- News -->
@@ -137,7 +137,7 @@
 </div>
 
 <br>
-<Ad/>
+<adsbygoogle />
 <br>
 
 <!-- Blog -->
@@ -187,7 +187,7 @@
 </div>
 
 <br>
-<Ad/>
+<adsbygoogle />
 <br>
 
 <!-- events -->
