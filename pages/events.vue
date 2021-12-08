@@ -98,20 +98,20 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'theme-color', content: '#34D399' },
       // Facebook 
-      { name: 'og:site _name', content: 'BSN' },
-      { name: 'og:title', content: 'Events - BSN' },
+      { hid: 'og:site _name', name: 'og:title', content: 'BSN' },
+      { hid: 'og:title', name: 'og:title', content: 'Events - BSN' },
       { hid: 'description', name: 'og:description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
       // Twitter
-      { name: 'twitter:title', content: 'Events - BSN' },
-      { hid: 'description', name: 'twitter:description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
+      { hid: 'twitter:title', name: 'twitter:title', content: 'Events - BSN' },
+      { hid: 'twitter:description', name: 'twitter:description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
       // SEO
-      { name: 'title', content: 'Events - BSN' },
+      { hid: 'title', name: 'title', content: 'Events - BSN' },
       { hid: 'description', name: 'description', content: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.' },
-      { name: 'keywords', content: 'rocket, events, news, spaceflight, nasa, spacex, starship, astronomy, apod, liftoff, tv, space' },
-      { name: 'author', content: 'BSN' },
-      { name: 'robots', content: 'index, follow' },
-      { name: 'language', content: 'English' },
-      { name: 'revisit-after', content: '1 days' },
+      { hid: 'keywords', name: 'keywords', content: 'rocket, events, news, spaceflight, nasa, spacex, starship, astronomy, apod, liftoff, tv, space' },
+      { hid: 'author', name: 'author', content: 'BSN' },
+      { hid: 'robots', name: 'robots', content: 'index, follow' },
+      { hid: 'language', name: 'language', content: 'English' },
+      { hid: 'revisit-after', name: 'revisit-after', content: '1 days' },
 
     ],
    link: [
