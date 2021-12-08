@@ -28,7 +28,7 @@ export default {
     manifest: {
       name: 'BeyondSpaceNews',
       lang: 'en',
-      description: 'Your number one resource for all latest spaceflight news! Explore the universe and science with leading articles.',
+      description: '',
       theme_color: '#34D399',
       start_url: 'https://beyondspacenews.com/',
       short_name: 'BSN',
