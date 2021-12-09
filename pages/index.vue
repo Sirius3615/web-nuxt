@@ -43,7 +43,7 @@
     <div class="col-start-1 row-start-1 flex sm:col-start-2 sm:row-span-3">
       <div class="w-full grid grid-cols-3 grid-rows-2 gap-2">
         <div class="relative col-span-3 row-span-2 md:col-span-3 ">
-          <img :src="launch.results[0].image" :alt="launch.results[0].name" class="absolute inset-0 w-full h-full object-cover bg-gray-100 sm:rounded-lg rounded-xl md:shadow-lg lg:shadow-lg" />
+          <nuxt-img :src="launch.results[0].image" :alt="launch.results[0].name" class="absolute inset-0 w-full h-full object-cover bg-gray-100 sm:rounded-lg rounded-xl md:shadow-lg lg:shadow-lg" />
         </div>
       </div>
     </div>
@@ -59,7 +59,7 @@
     
 		<div class="flex flex-col bg-gray-100 dark:bg-gray-700 rounded-lg m-2 shadow-lg">
 			<div class="h-40 rounded-lg">
-       <img :src="launch.results[i].image" :alt="launch.results[i].name" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
+       <nuxt-img :src="launch.results[i].image" :alt="launch.results[i].name" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
       </div>
 			<div class="flex flex-col items-start p-4 mt-2">
           <div class="inline-flex space-x-4 mb-2 ">
@@ -113,7 +113,7 @@
     <div class="col-start-1 row-start-1 flex sm:col-start-2 sm:row-span-3">
       <div class="w-full grid grid-cols-3 grid-rows-2 gap-2">
         <div class="relative col-span-3 row-span-2 md:col-span-3 ">
-          <img :src="news.imageUrl" :alt="news.title" class="absolute inset-0 w-full h-full object-cover bg-gray-100 sm:rounded-lg rounded-xl md:shadow-lg lg:shadow-lg" />
+          <nuxt-img :src="news.imageUrl" :alt="news.title" class="absolute inset-0 w-full h-full object-cover bg-gray-100 sm:rounded-lg rounded-xl md:shadow-lg lg:shadow-lg" />
         </div>
       </div>
     </div>
@@ -127,7 +127,7 @@
 	<div v-for="news in newss.slice(1, 4)">
 		<div class="flex flex-col bg-gray-100 dark:bg-gray-700 rounded-lg m-2 shadow-lg">
 			<div class="h-40 rounded-lg">
-       <img :src="news.imageUrl" :alt="news.title" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
+       <nuxt-img :src="news.imageUrl" :alt="news.title" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
       </div>
 			<div class="flex flex-col items-start p-4 mt-4">
 				<a :href="news.url"><h4 class="text-xl font-semibold pb-3"> {{ news.title }}</h4></a>
@@ -165,7 +165,7 @@
     <div class="col-start-1 row-start-1 flex sm:col-start-2 sm:row-span-3">
       <div class="w-full grid grid-cols-3 grid-rows-2 gap-2">
         <div class="relative col-span-3 row-span-2 md:col-span-3 ">
-          <img :src="blog.imageUrl" :alt="blog.title" class="absolute inset-0 w-full h-full object-cover bg-gray-100 sm:rounded-lg rounded-xl md:shadow-lg lg:shadow-lg" />
+          <nuxt-img :src="blog.imageUrl" :alt="blog.title" class="absolute inset-0 w-full h-full object-cover bg-gray-100 sm:rounded-lg rounded-xl md:shadow-lg lg:shadow-lg" />
         </div>
       </div>
     </div>
@@ -179,7 +179,7 @@
 	<div v-for="blog in blogg.slice(1, 4)">
 		<div class="flex flex-col bg-gray-100 dark:bg-gray-700 rounded-lg m-2 shadow-lg">
 			<div class="h-40 rounded-lg">
-       <img :src="blog.imageUrl" :alt="blog.title" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
+       <nuxt-img :src="blog.imageUrl" :alt="blog.title" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
       </div>
 			<div class="flex flex-col items-start p-4 mt-4">
 				<a :href="blog.url"><h4 class="text-xl font-semibold pb-3"> {{ blog.title }}</h4></a>
@@ -227,7 +227,7 @@
     <div class="col-start-1 row-start-1 flex sm:col-start-2 sm:row-span-3">
       <div class="w-full grid grid-cols-3 grid-rows-2 gap-2">
         <div class="relative col-span-3 row-span-2 md:col-span-3 ">
-          <img :src="event.results[0].feature_image" :alt="event.results[0].name" class="absolute inset-0 w-full h-full object-cover bg-gray-100 sm:rounded-lg rounded-xl md:shadow-lg lg:shadow-lg" />
+          <nuxt-img :src="event.results[0].feature_image" :alt="event.results[0].name" class="absolute inset-0 w-full h-full object-cover bg-gray-100 sm:rounded-lg rounded-xl md:shadow-lg lg:shadow-lg" />
         </div>
       </div>
     </div>
@@ -242,7 +242,7 @@
   	    <div v-for="event in events">
             <div class="flex flex-col bg-gray-100 dark:bg-gray-700 rounded-lg m-2 shadow-lg">
 			    <div class="h-40 rounded-lg">
-                    <img :src="event.results[i].feature_image" :alt="event.results[i].name" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
+                    <nuxt-img :src="event.results[i].feature_image" :alt="event.results[i].name" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
                 </div>
 			<div class="flex flex-col items-start p-4 mt-2">
                 <div class="inline-flex space-x-4 mb-2 ">

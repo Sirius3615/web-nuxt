@@ -16,7 +16,7 @@
       </div>
       <div class="mt-4">
         <NuxtLink to="/">
-        <img
+        <nuxt-img
           src="https://i.insider.com/5d2faa4d7e76cc3f20437ff6?width=700"
           alt="img"
           class="object-cover w-full h-full rounded-2xl shadow-xl"
