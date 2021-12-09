@@ -36,7 +36,7 @@
     <div class="col-start-1 row-start-1 flex sm:col-start-2 sm:row-span-3">
       <div class="w-full grid grid-cols-3 grid-rows-2 gap-2">
         <div class="relative col-span-3 row-span-2 md:col-span-3 ">
-          <nuxt-img :src="event.results[0].feature_image" :alt="event.results[0].name" class="absolute inset-0 w-full h-full object-cover bg-gray-100 sm:rounded-lg rounded-xl md:shadow-lg lg:shadow-lg" />
+          <img :src="event.results[0].feature_image" :alt="event.results[0].name" class="absolute inset-0 w-full h-full object-cover bg-gray-100 sm:rounded-lg rounded-xl md:shadow-lg lg:shadow-lg" />
         </div>
       </div>
     </div>
@@ -51,7 +51,7 @@
   	    <div v-for="event in events" :key="event.id">
             <div class="flex flex-col bg-gray-100 dark:bg-gray-700 rounded-lg m-2 shadow-lg">
 			    <div class="h-40 rounded-lg">
-                    <nuxt-img :src="event.results[i].feature_image" :alt="event.results[i].name" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
+                    <img :src="event.results[i].feature_image" :alt="event.results[i].name" class=" w-full h-full object-cover bg-gray-100 rounded-lg shadow-lg" />
                 </div>
 			<div class="flex flex-col items-start p-4 mt-2">
                 <div class="inline-flex space-x-4 mb-2 ">
