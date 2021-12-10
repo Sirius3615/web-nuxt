@@ -32,7 +32,7 @@ export default {
       lang: 'en',
       description: '',
       theme_color: '#34D399',
-      start_url: 'https://beyondspacenews.com/',
+      start_url: '/',
       short_name: 'BSN',
       useWebmanifestExtension: false,
       display: 'standalone'
