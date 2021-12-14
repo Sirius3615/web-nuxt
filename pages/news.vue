@@ -108,7 +108,7 @@ export default {
     },
     async fetch() {
       this.newss = await fetch(
-         'https://api.spaceflightnewsapi.net/v3/articles?_limit=15'
+         'https://beyondspacenews.com/api/news/all'
       ).then(res => res.json())
     },
 

@@ -1,7 +1,11 @@
 const axios = require('axios');
 const bodyParser = require('body-parser')
 const app = require('express')()
+var cors = require('cors')
+
 app.use(bodyParser.json())
+app.use(cors())
+
 
 
 
