@@ -103,7 +103,7 @@ export default {
     },
     async fetch() {
       this.blogg = await fetch(
-         'https://api.spaceflightnewsapi.net/v3/blogs?_limit=15'
+         'https://beyondspacenews.com/api/blog/all'
       ).then(res => res.json())
     },
 

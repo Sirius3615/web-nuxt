@@ -12,14 +12,16 @@ app.use(cors())
 const launches = [];
 const events = [];
 const news = [];
+const blog = [];
+
 
 // REPLACE DEV ENDPOINTS BEFORE THE COMMIT
 var launch_url = 'https://ll.thespacedevs.com/2.2.0/launch/upcoming/?limit=100&hide_recent_previous=true&mode=detailed&format=json';
 var event_url = 'https://ll.thespacedevs.com/2.0.0/event/upcoming/?limit=100';
-var news_url = 'https://api.spaceflightnewsapi.net/v3/articles?_limit=20'
+var news_url = 'https://api.spaceflightnewsapi.net/v3/articles?_limit=20';
+var blog_url = 'https://api.spaceflightnewsapi.net/v3/blogs?_limit=20'
 // UPDATE EVENTS MANUALLY BEFORE EACH COMMIT IF THE CACHE API ON GLITCH IS NO LONGER WORKING
 
-// DO A REAL WORLD TEST SOON, WEIRD THING IN JSON FORMAT try removig JSON.stringify and see what it changes..
 // USE LLDEV ENDPOINT TO MAKE A SEARCH LAUNCH ENDPOINT!! THAT WILL FIRST SEARCH IN LLDEV PAST ONES AND IF NOTHING SEARCH IN UPCOMING 10 launches
 
 axios.get(launch_url)
@@ -34,16 +36,23 @@ axios.get('https://beyond-apis.glitch.me/launch/api/v2/events')
   .then(function (response) {
     events.pop();
     events.push(response.data);
-    console.log('Fetched events')
+    console.log('Fetched Events')
 });
 
 axios.get(news_url)
    .then(function (response) {
     news.pop();
     news.push(JSON.stringify(response.data));
-    console.log('Fetched news')
+    console.log('Fetched News')
 });
 
+
+axios.get(blog_url)
+   .then(function (response) {
+    blog.pop();
+    blog.push(JSON.stringify(response.data));
+    console.log('Fetched Blogs')
+});
 
 
 //fetch launches
@@ -78,6 +87,16 @@ setInterval(function(){
 
 },5 * 60000);
 
+//fetch news
+setInterval(function(){
+  axios.get(blog_url)
+   .then(function (response) {
+    blog.pop();
+    blog.push(JSON.stringify(response.data));
+    console.log('Blogs pushed')
+  });
+
+},5 * 60000);
 
 
 
@@ -92,11 +111,15 @@ app.all('/launches/all', (req, res) => {
 })
 
 app.all('/events/all', (req, res) => {
-  res.json(events[0])
+  res.json(events)
 })
 
 app.all('/news/all', (req, res) => {
   res.end(news[0])
+})
+
+app.all('/blog/all', (req, res) => {
+  res.end(blog[0])
 })
 
 module.exports = app

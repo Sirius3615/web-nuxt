@@ -129,7 +129,7 @@ export default {
     },
     async fetch() {
       this.events = await fetch(
-          'https://beyond-apis.glitch.me/launch/api/v2/events' // process.env.DOMAIN + '/api/events'
+          'https://beyondspacenews.com/api/events/all' // process.env.DOMAIN + '/api/events'
       ).then(res => res.json())
     },
 
