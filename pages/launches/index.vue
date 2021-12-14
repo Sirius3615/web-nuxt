@@ -134,7 +134,7 @@ export default {
     },
     async fetch() {
       this.launches = await fetch(
-          'https://beyondspacenews.com/api/launches/all'
+          'https://beyond-apis.glitch.me/launch/api/v2/all'
       ).then(res => res.json())
     },
 

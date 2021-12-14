@@ -14,8 +14,8 @@ const events = [];
 const news = [];
 
 // REPLACE DEV ENDPOINTS BEFORE THE COMMIT
-var launch_url = 'https://lldev.thespacedevs.com/2.2.0/launch/upcoming/?limit=100&hide_recent_previous=true&mode=detailed&format=json';
-var event_url = 'https://lldev.thespacedevs.com/2.0.0/event/upcoming/?limit=100';
+var launch_url = 'https://ll.thespacedevs.com/2.2.0/launch/upcoming/?limit=100&hide_recent_previous=true&mode=detailed&format=json';
+var event_url = 'https://ll.thespacedevs.com/2.0.0/event/upcoming/?limit=100';
 var news_url = 'https://api.spaceflightnewsapi.net/v3/articles?_limit=20'
 // UPDATE EVENTS MANUALLY BEFORE EACH COMMIT IF THE CACHE API ON GLITCH IS NO LONGER WORKING
 
@@ -92,7 +92,7 @@ app.all('/launches/all', (req, res) => {
 })
 
 app.all('/events/all', (req, res) => {
-  res.json(events)
+  res.json(events[0])
 })
 
 app.all('/news/all', (req, res) => {
@@ -100,4 +100,3 @@ app.all('/news/all', (req, res) => {
 })
 
 module.exports = app
-

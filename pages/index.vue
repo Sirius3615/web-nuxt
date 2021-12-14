@@ -318,16 +318,16 @@ export default {
     },
     async fetch() {
       this.launches = await fetch(
-          'https://beyondspacenews.com/api/launches/all' 
+         'https://beyond-apis.glitch.me/launch/api/v2/all' // process.env.DOMAIN + '/api/launches/all'
       ).then(res => res.json()),
       this.newss = await fetch(
-         'https://beyondspacenews.com/api/news/all'
+         'https://api.spaceflightnewsapi.net/v3/articles?_limit=5'
       ).then(res => res.json()),
       this.blogg = await fetch(
          'https://api.spaceflightnewsapi.net/v3/blogs?_limit=5'
       ).then(res => res.json()),
       this.events = await fetch(
-          'https://beyondspacenews.com/api/events/all' 
+          'https://beyond-apis.glitch.me/launch/api/v2/events' // process.env.DOMAIN + '/api/events'
       ).then(res => res.json())
     },
 
