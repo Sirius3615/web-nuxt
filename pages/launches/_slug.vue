@@ -15,8 +15,8 @@
     <div class="col-start-1 row-start-2 px-4 sm:pb-4">
       <div class="inline-flex space-x-4 mt-2">
 
-      <a :href="`/launches/next/` + launched.slug" class="flex-1 w-14 bg-green-300 dark:bg-green-500  font-bold py-2 px-4 rounded-full " v-if="launched.status.abbrev === 'Go'"> {{ launched.status.abbrev }}</a>
-      <a :href="`/launches/next/` + launched.slug" class="flex-1 w-14 bg-yellow-400 dark:bg-yellow-400  font-bold py-2 px-3 rounded-full " v-else> {{ launched.status.abbrev }}</a>
+      <a :href="`/launches/` + launched.slug" class="flex-1 w-14 bg-green-300 dark:bg-green-500  font-bold py-2 px-4 rounded-full " v-if="launched.status.abbrev === 'Go'"> {{ launched.status.abbrev }}</a>
+      <a :href="`/launches/` + launched.slug" class="flex-1 w-14 bg-yellow-400 dark:bg-yellow-400  font-bold py-2 px-3 rounded-full " v-else> {{ launched.status.abbrev }}</a>
       <span v-if="launched.vidURLs[0]" class="relative inline-flex rounded-full shadow-sm">
         <a v-if="launched.vidURLs[0]" :href="launched.vidURLs[0].url" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Watch Live</a>
         <span v-if="launched.webcast_live === true" class="flex absolute h-3 w-3 top-0 right-0 ">

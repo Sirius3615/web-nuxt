@@ -1,4 +1,9 @@
 const axios = require('axios');
+const bodyParser = require('body-parser')
+const app = require('express')()
+app.use(bodyParser.json())
+
+
 
 const launches = [];
 const events = [];
@@ -42,7 +47,7 @@ setInterval(function(){
     axios.get(launch_url)
      .then(function (response) {
       launches.pop();
-      launches.push(JSON.stringify(response.data));
+      launches.push(response.data);
       console.log('Launches pushed')
      });
  },6 * 60000);
@@ -52,7 +57,7 @@ setInterval(function(){
   axios.get(event_url)
    .then(function (response) {
     events.pop();
-    events.push(JSON.stringify(response.data));
+    events.push(response.data);
     console.log('Events pushed')
   });
 
@@ -71,32 +76,24 @@ setInterval(function(){
 
 
 
-// API routes
-export default function (req, res, next) {
-    
-    console.log(req.url)
 
-    if(req.url === "/") {
-      res.end(JSON.stringify({ data: req.url }));
-      return;
-    } 
-  
-    // Launches endpoint
-    if(req.url === "/launches/all"){
-      res.end(JSON.stringify(launches[0]));
-    }
+// API
 
-    // Events endpoint
-    if(req.url === "/events/all"){
-      res.end(JSON.stringify(events[0]));
-    }
+app.all('/', (req, res) => {
+  res.json({ data: 'data' })
+})
 
-    // News endpoint
-    if(req.url === "/news/all"){
-      res.end(news[0]);
-    }
-  
-    // next is a function to call to invoke the next middleware
-    // Don't forget to call next at the end if your middleware is not an endpoint!
-    next()
-  }
+app.all('/launches/all', (req, res) => {
+  res.json(launches)
+})
+
+app.all('/events/all', (req, res) => {
+  res.json(events)
+})
+
+app.all('/news/all', (req, res) => {
+  res.end(news[0])
+})
+
+module.exports = app
+

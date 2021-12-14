@@ -16,9 +16,9 @@
     </div>
     <div class="col-start-1 row-start-2 px-4 sm:pb-4">
       <div class="inline-flex space-x-4 mt-2">
-      <a :href="`/launches/next/` + launch.results[0].slug" class="flex-1 w-14 bg-green-300 dark:bg-green-500  font-bold py-2 px-4 rounded-full " v-if="launch.results[0].status.abbrev === 'Go'"> {{ launch.results[0].status.abbrev }}</a>
-      <a :href="`/launches/next/` + launch.results[0].slug" class="flex-1 w-14 bg-yellow-400 dark:bg-yellow-400  font-bold py-2 px-3 rounded-full " v-else> {{ launch.results[0].status.abbrev }}</a>
-      <a :href="`/launches/next/` + launch.results[0].slug" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Info</a>
+      <a :href="`/launches/` + launch.results[0].slug" class="flex-1 w-14 bg-green-300 dark:bg-green-500  font-bold py-2 px-4 rounded-full " v-if="launch.results[0].status.abbrev === 'Go'"> {{ launch.results[0].status.abbrev }}</a>
+      <a :href="`/launches/` + launch.results[0].slug" class="flex-1 w-14 bg-yellow-400 dark:bg-yellow-400  font-bold py-2 px-3 rounded-full " v-else> {{ launch.results[0].status.abbrev }}</a>
+      <a :href="`/launches/` + launch.results[0].slug" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Info</a>
           
           <span v-if="launch.results[0].vidURLs[0]" class="relative inline-flex rounded-full shadow-sm">
               <a v-if="launch.results[0].vidURLs[0]" :href="launch.results[0].vidURLs[0].url" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Watch Live</a>
@@ -63,9 +63,9 @@
       </div>
 			<div class="flex flex-col items-start p-4 mt-2">
           <div class="inline-flex space-x-4 mb-2 ">
-            <a :href="`/launches/next/` + launch.results[i].slug" class="flex-1 w-14 bg-green-300 dark:bg-green-500  font-bold py-2 px-4 rounded-full " v-if="launch.results[i].status.abbrev === 'Go'"> {{ launch.results[i].status.abbrev }}</a>
-            <a :href="`/launches/next/` + launch.results[i].slug" class="flex-1 w-14 bg-yellow-400 dark:bg-yellow-400  font-bold py-2 px-3 rounded-full " v-else> {{ launch.results[i].status.abbrev }}</a>
-            <a :href="`/launches/next/` + launch.results[i].slug" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Info</a>
+            <a :href="`/launches/` + launch.results[i].slug" class="flex-1 w-14 bg-green-300 dark:bg-green-500  font-bold py-2 px-4 rounded-full " v-if="launch.results[i].status.abbrev === 'Go'"> {{ launch.results[i].status.abbrev }}</a>
+            <a :href="`/launches/` + launch.results[i].slug" class="flex-1 w-14 bg-yellow-400 dark:bg-yellow-400  font-bold py-2 px-3 rounded-full " v-else> {{ launch.results[i].status.abbrev }}</a>
+            <a :href="`/launches/` + launch.results[i].slug" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Info</a>
 
                <span v-if="launch.results[i].vidURLs[0]" class="relative inline-flex rounded-md shadow-sm">
                   <a v-if="launch.results[i].vidURLs[0]" :href="launch.results[i].vidURLs[0].url" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Watch Live</a>

@@ -17,10 +17,11 @@ export default {
   build: {
   },
 
-  serverMiddleware: {
-    '/api': '~/api/index.js',
+  serverMiddleware: [
+    { path: "/api", handler: "~/api/index.js" },
 
-  },
+
+  ],
 
   googleAnalytics: {
     id: '285402647'

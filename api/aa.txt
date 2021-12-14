@@ -1,0 +1,30 @@
+// API routes
+export default function (req, res, next) {
+    
+    console.log(req.url)
+
+    if(req.url === "/") {
+      res.end(JSON.stringify({ data: req.url }));
+      return;
+    } 
+  
+    // Launches endpoint
+    if(req.url === "/launches/all") {
+      res.end(JSON.stringify(launches));
+      return;
+    }
+
+    // Events endpoint
+    if(req.url === "/events/all"){
+      res.end(events[0]);
+    }
+
+    // News endpoint
+    if(req.url === "/news/all"){
+      res.end(news[0]);
+    }
+  
+    // next is a function to call to invoke the next middleware
+    // Don't forget to call next at the end if your middleware is not an endpoint!
+    next()
+  }
