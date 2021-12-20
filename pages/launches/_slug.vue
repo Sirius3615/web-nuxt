@@ -46,7 +46,7 @@
 </div>
 
 <br>
-<div class=" place-items-center w-full">
+<div class=" place-items-center w-full lg:rounded-lg">
 <adsbygoogle page-url="https://beyondspacenews.com/"/>
 </div>
 <br>
@@ -198,7 +198,7 @@
 </div>
 
 <br>
-<div class=" place-items-center w-full">
+<div class=" place-items-center w-full lg:rounded-lg">
 <adsbygoogle page-url="https://beyondspacenews.com/"/>
 </div>
 <br>

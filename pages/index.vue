@@ -86,7 +86,7 @@
 </div>
 
 <br>
-<div class=" place-items-center w-full">
+<div class=" place-items-center w-full lg:rounded-lg">
 <adsbygoogle page-url="https://beyondspacenews.com/"/>
 </div>
 <br>
@@ -139,7 +139,7 @@
 </div>
 
 <br>
-<div class=" place-items-center w-full">
+<div class=" place-items-center w-full lg:rounded-lg">
 <adsbygoogle page-url="https://beyondspacenews.com/"/>
 </div>
 <br>
@@ -191,7 +191,7 @@
 </div>
 
 <br>
-<div class=" place-items-center w-full">
+<div class=" place-items-center w-full lg:rounded-lg">
 <adsbygoogle page-url="https://beyondspacenews.com/"/>
 </div>
 <br> 
@@ -205,7 +205,7 @@
     </div>
     <div class="col-start-1 row-start-2 px-4 sm:pb-4">
       <div class="inline-flex space-x-4 mt-2">
-      <!-- <a :href="`/events/next/` + event.results[0].slug" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Info</a> -->
+      <!-- <a :href="`/events//` + event.results[0].slug" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Info</a> -->
     <span v-if="event.results[0].video_url" class="relative inline-flex rounded-md shadow-sm">
         <a v-if="event.results[0].video_url" :href="event.results[0].video_url" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Watch Live</a>
         <span class="flex absolute h-3 w-3 top-0 right-0 ">
@@ -246,7 +246,7 @@
                 </div>
 			<div class="flex flex-col items-start p-4 mt-2">
                 <div class="inline-flex space-x-4 mb-2 ">
-                   <!-- <a :href="`/events/next/` + event.results[i].slug" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Info</a> -->
+                   <!-- <a :href="`/events//` + event.results[i].slug" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Info</a> -->
                         <span v-if="event.results[i].video_url" class="relative inline-flex rounded-md shadow-sm">
                             <a v-if="event.results[i].video_url" :href="event.results[i].video_url" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Watch Live</a>
                             <span class="flex absolute h-3 w-3 top-0 right-0 ">
@@ -318,16 +318,16 @@ export default {
     },
     async fetch() {
       this.launches = await fetch(
-         'https://beyondspacenews.com/api/launches/all' // process.env.DOMAIN + '/api/launches/all'
+         'https://beyond-apis.glitch.me/launch/api/v2/all' // process.env.DOMAIN + '/api/launches/all'
       ).then(res => res.json()),
       this.newss = await fetch(
-         'https://beyondspacenews.com/api/news/all'
+         'https://api.spaceflightnewsapi.net/v3/articles?_limit=5'
       ).then(res => res.json()),
       this.blogg = await fetch(
-         'https://beyondspacenews.com/api/blog/all'
+         'https://api.spaceflightnewsapi.net/v3/blogs?_limit=5'
       ).then(res => res.json()),
       this.events = await fetch(
-          'https://beyondspacenews.com/api/events/all' // process.env.DOMAIN + '/api/events'
+          'https://beyond-apis.glitch.me/launch/api/v2/events' // process.env.DOMAIN + '/api/events'
       ).then(res => res.json())
     },
 

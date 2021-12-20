@@ -80,7 +80,7 @@
 </div>
 
 <br>
-<div class=" place-items-center w-full">
+<div class=" place-items-center w-full lg:rounded-lg">
 <adsbygoogle page-url="https://beyondspacenews.com/"/>
 </div>
 <br>
@@ -134,7 +134,7 @@ export default {
     },
     async fetch() {
       this.launches = await fetch(
-          'https://beyondspacenews.com/api/launches/all'
+          'https://beyond-apis.glitch.me/launch/api/v2/all'
       ).then(res => res.json())
     },
 

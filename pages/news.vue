@@ -54,7 +54,7 @@
 </div>
 
 <br>
-<div class=" place-items-center w-full">
+<div class=" place-items-center w-full lg:rounded-lg">
 <adsbygoogle page-url="https://beyondspacenews.com/"/>
 </div>
 <br>
@@ -108,7 +108,7 @@ export default {
     },
     async fetch() {
       this.newss = await fetch(
-         'https://beyondspacenews.com/api/news/all'
+         'https://api.spaceflightnewsapi.net/v3/articles?_limit=20'
       ).then(res => res.json())
     },
 
