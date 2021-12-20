@@ -52,6 +52,12 @@
     </div>
 </div>
 
+<br>
+<div class=" place-items-center w-full">
+<adsbygoogle page-url="https://beyondspacenews.com/"/>
+</div>
+<br>
+
 
 </div>
 
