@@ -48,14 +48,14 @@
 
 <!-- Livestream -->
 <div v-if="launched.vidURLs[0]" class="rounded-lg mt-3 grid place-items-center h-auto">
-<iframe height="400" width="700" :src="video_url" title="YouTube video player" frameborder="0"
+<iframe :src="video_url" style="width: 100%; height: 400px; max-width: 700px; max-height: 640px;" title="YouTube video player" frameborder="0"
  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 
-
+ 
 <br>
-<div class="w-full lg:rounded-lg grid place-items-center h-auto">
+<div class="w-full lg:rounded-lg grid place-items-center h-auto" >
 <adsbygoogle page-url="https://beyondspacenews.com/"/>
 </div>
 <br>
