@@ -45,13 +45,22 @@
   </div>
 </div>
 
+
+<!-- Livestream -->
+<div v-if="launched.vidURLs[0]" class="rounded-lg mt-3 grid place-items-center h-auto">
+<iframe height="400" width="700" :src="video_url" title="YouTube video player" frameborder="0"
+ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+
 <br>
-<div class=" place-items-center w-full lg:rounded-lg">
+<div class="w-full lg:rounded-lg grid place-items-center h-auto">
 <adsbygoogle page-url="https://beyondspacenews.com/"/>
 </div>
 <br>
 
-<div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2 p-0 m-0 ">
+<div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2 p-0 m-0  ">
 
 <!-- Launch service provider -->
 		<div v-if="launched.launch_service_provider" class="flex flex-col bg-gray-100 dark:bg-gray-700 rounded-lg m-2 shadow-lg">
@@ -198,7 +207,7 @@
 </div>
 
 <br>
-<div class=" place-items-center w-full lg:rounded-lg">
+<div class=" w-full lg:rounded-lg grid place-items-center h-auto lg:rounded-lg">
 <adsbygoogle page-url="https://beyondspacenews.com/"/>
 </div>
 <br>
@@ -276,6 +285,19 @@ methods: {
       console.log('finish');
     }
 },
+
+computed: {
+  video_url() {
+    if(this.launched.vidURLs[0]) {
+      var url = this.launched.vidURLs[0].url;
+      var videoID = url.match(/(?:youtu\.be\/|youtube\.com(?:\/embed\/|\/v\/|\/watch\?v=|\/user\/\S+|\/ytscreeningroom\?v=))([\w\-]{10,12})\b/)[1];
+      
+      var the_url = "https://www.youtube.com/embed/" + videoID
+      
+      return the_url; 
+      } else { return null }  
+  }
+}
 
 }
 </script>

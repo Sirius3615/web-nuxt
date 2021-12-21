@@ -54,7 +54,7 @@
 </div>
 
 <br>
-<div class=" place-items-center w-full lg:rounded-lg">
+<div class=" w-full lg:rounded-lg grid place-items-center h-auto lg:rounded-lg">
 <adsbygoogle page-url="https://beyondspacenews.com/"/>
 </div>
 <br>
