@@ -4,7 +4,7 @@
         <nav class="flex items-center justify-between flex-wrap">
             <NuxtLink to="/">
             <div class="flex items-center flex-no-shrink mr-6 text-black dark:text-white">
-                <img src="/icon.png" alt="logo" width="40" height="40" class="object-cover"/>
+                <img src="/christmas_icon.png" alt="logo" width="40" height="40" class="object-cover"/> <!-- Logo -->
                 <span class="font-semibold text-xl tracking-tight">BSN</span>
             </div>
             </NuxtLink>
@@ -12,7 +12,7 @@
                 <button class="navbar-burger flex items-center px-3 py-2 border rounded text-black dark:text-white border-black dark:border-white">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/></svg>              
                 </button>
-            </div>
+            </div> 
             <div id="main-nav" class="w-full flex-grow sm:flex items-center sm:w-auto hidden">
                 <div class="text-sm sm:flex-grow">
                     <NuxtLink to="/news" class="no-underline font-bold block mt-4 sm:inline-block sm:mt-0 mr-4">

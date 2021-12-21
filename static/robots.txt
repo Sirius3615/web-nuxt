@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://www.beyondspacenews.com/static/sitemap.xml
+Sitemap: http://www.beyondspacenews.com/sitemap.xml
