@@ -206,7 +206,15 @@ app.get("/api/staff",(req, res, next) => {
       const launched = launches[0].results.find(
         (obj) => obj.slug === req.params.slug);
       
-        res.send(launched)
+
+        if(!launched) {
+          fetch('https://devll.thespacedevs.com/2.2.0/launch/previous/?slug=' + req.params.slug) 
+          .then(response => response.json())
+          .then(data => {
+            res.send(data);
+          })
+        } else { res.send(launched) }
+          // res.send(launched)
        console.log('Requested')
      });
 
