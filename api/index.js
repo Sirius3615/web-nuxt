@@ -7,8 +7,6 @@ app.use(bodyParser.json())
 app.use(cors())
 
 
-
-
 const launches = [];
 const events = [];
 const news = [];
@@ -97,6 +95,29 @@ setInterval(function(){
   });
 
 },5 * 60000);
+
+
+// brevilacqua email
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
