@@ -127,7 +127,7 @@ export default {
       }
     },
     async asyncData({ $axios }){
-       const events = (await $axios.get('https://beyondspacenews.com/api/events/all')).data
+       const events = (await $axios.get('https://beyond-apis.glitch.me/launch/api/v2/events')).data
        return { events }
     },
 
