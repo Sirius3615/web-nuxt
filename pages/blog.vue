@@ -107,10 +107,9 @@ export default {
 
       }
     },
-    async fetch() {
-      this.blogg = await fetch(
-         'https://api.spaceflightnewsapi.net/v3/blogs?_limit=20'
-      ).then(res => res.json())
+    async asyncData({ $axios }){
+       const blogg = (await $axios.get('https://api.spaceflightnewsapi.net/v3/blogs?_limit=5')).data
+        return { blogg }
     },
 
 }

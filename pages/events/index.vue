@@ -126,11 +126,11 @@ export default {
         events: []
       }
     },
-    async fetch() {
-      this.events = await fetch(
-          'https://beyond-apis.glitch.me/launch/api/v2/events' // process.env.DOMAIN + '/api/events'
-      ).then(res => res.json())
+    async asyncData({ $axios }){
+       const events = (await $axios.get('https://beyondspacenews.com/api/events/all')).data
+       return { events }
     },
+
 
     methods: {
     finish() {

@@ -6,6 +6,7 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-analytics',
     '@nuxtjs/pwa',
+    '@nuxtjs/axios',
     '@nuxtjs/sitemap',
     ['@nuxtjs/google-adsense', {
       id: 'ca-pub-4670880031318337'
