@@ -8,7 +8,7 @@
             <li><a href="mailto:support@beyondspacenews.com">Email</a></li>
           </ul>
         </div>
-        <p class="text-xs text-gray-400">Copyright © 2020 - 2021 BSN, All Rights Reserved</p>
+        <p class="text-xs text-gray-400">Copyright © 2020 - 2022 BSN, All Rights Reserved</p>
         <div class="flex justify-center mt-4 lg:mt-0">
           <a href="https://discord.com/invite/EpV2SEeT2M" class="ml-3">
             <svg

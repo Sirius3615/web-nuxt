@@ -82,7 +82,7 @@
 </div>
 
 <br>
-<div class="w-full rounded-lg grid place-items-center">
+<div class="w-full rounded-lg ">
 <adsbygoogle page-url="https://beyondspacenews.com/"/>
 </div>
 <br>
