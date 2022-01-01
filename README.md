@@ -1,14 +1,12 @@
 # [BeyondSpaceNews](https://beyondspacenews.com)
 
-[![DigitalOcean Referral Badge](https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg)](https://www.digitalocean.com/?refcode=f829d8a2eb78&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)     [![Better Uptime Badge](https://betteruptime.com/status-badges/v1/monitor/avdc.svg)](https://betteruptime.com/?utm_source=status_badge) 
-
-
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg)](https://www.digitalocean.com/?refcode=f829d8a2eb78&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)     
 <hr>
 
 * This website is built on NuxtJs and TialwindCss with few other dependencies. 
 * You are free to contribute to this project by subbmitting pull requests, creating issues on GitHub or starting a discussion.
 
-You may support us by donating or by uisng our affiliate link to [Digital Ocean](https://m.do.co/c/f829d8a2eb78)
+You may support us by [donating](https://www.buymeacoffee.com/sirius) or by uisng our affiliate link to [Digital Ocean](https://m.do.co/c/f829d8a2eb78)
 
 <br>
 
@@ -27,7 +25,7 @@ $ yarn start
 
 # License
 
-### Copyright 2020-2021 
+### Copyright 2020-2022 
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

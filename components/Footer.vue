@@ -5,7 +5,7 @@
           <ul class="flex items-center space-x-4">
             <li><NuxtLink to="/">Home</NuxtLink></li>
             <li><a href="https://www.privacypolicies.com/live/36122dc9-9342-405e-b5cf-f1f9d2f709cb">Privacy</a></li>
-            <li><a href="mailto:support@beyondspacenews.com">Email</a></li>
+            <li><a href="mailto:support@beyondspacenews.com">Contact</a></li>
           </ul>
         </div>
         <p class="text-xs text-gray-400">Copyright © 2020 - 2022 BSN, All Rights Reserved</p>
