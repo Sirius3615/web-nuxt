@@ -7,7 +7,6 @@ export default {
     '@nuxtjs/google-analytics',
     '@nuxtjs/pwa',
     '@nuxtjs/axios',
-    '@nuxtjs/sitemap',
     ['@nuxtjs/google-adsense', {
       id: 'ca-pub-4670880031318337'
     }],
@@ -43,8 +42,5 @@ export default {
       /* meta options */
     }
   },
-  sitemap: {
-    hostname: 'https://beyondspacenews.com/',
-    gzip: true,
-  }
+  
 }
