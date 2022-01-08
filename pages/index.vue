@@ -278,8 +278,10 @@
 
 export default {
 
-  head: {
+  head() {
+    return {
     title: 'Spaceflight news - BSN',
+    script: [{ type: 'application/ld+json', json: this.structuredData }],
     meta: [
       // Basic meta tags
       { charset: 'utf-8' },
@@ -308,6 +310,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/icon.png' },
       { rel: 'shortcut icon', type: 'image/x-icon', href: '/icon.png' },
         ]
+  }
   },
 
   data() {
@@ -315,8 +318,35 @@ export default {
         launches: [],
         newss: [],
         blogg: [],
-        events: []
+        events: [],
 
+        structuredData: {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "News",
+          "item": "https://beyondspacenews.com/news"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Launches",
+          "item": "https://beyondspacenews.com/launches"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Events",
+          "item": "https://beyondspacenews.com/events"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Blog",
+          "item": "https://beyondspacenews.com/blog"
+        }]
+        }
       }
     },
 

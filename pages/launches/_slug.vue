@@ -235,16 +235,19 @@ export default {
       { hid: 'og:site_name', name: 'og:site_name', content: 'BSN' },
       { hid: 'og:type', name: 'og:type', content: 'website' },
       { hid: 'og:title', name: 'og:title', content: this.launched.name + ' - BSN' }, 
-      { hid: 'description', property: 'og:description', content: "Get latest information about the launch!" },
-      { name: 'og:image', content: this.launched.image },
+      { hid: 'og:description', property: 'og:description', content: "Get the latest information about the launch. Click to find out more!" },
+      { hid: 'og:image', property: 'og:image', content: this.launched.image },
+      { hid: 'og:url', property: 'og:url', content: 'https://beyondspacenews.com/launches/' + this.launched.id },
+
+      { hid: 'og:image', name: 'og:image', content: this.launched.image },
       // Twitter
       { hid: 'twitter:title', name: 'twitter:title', content: this.launched.name + ' - BSN' },
-      { hid: 'twitter:description', property: 'twitter:description', content: "Get latest information about the launch!" },
+      { hid: 'twitter:description', property: 'twitter:description', content: "Get the latest information about the launch. Click to find out more!" },
       { name: 'twitter:image', content: this.launched.image },
       { name: 'twitter:card', content: 'summary_large_image' }, 
       // SEO
       { hid: 'title', name: 'title', content: this.launched.name + ' - BSN' },
-      { hid: 'description', name: 'description', content: "Get latest information about the launch!" },
+      { hid: 'description', name: 'description', content: "Get the latest information about the launch. Click to find out more!" },
       { hid: 'keywords', name: 'keywords', content: 'rocket, launches, news, spaceflight, nasa, spacex, starship, astronomy, apod, liftoff, tv, space' },
       { hid: 'author', name: 'author', content: 'BSN' },
       { hid: 'robots', name: 'robots', content: 'index, follow' },
@@ -262,7 +265,8 @@ export default {
  data() {
       return {
         page_slug: this.$route.params.slug,
-        launched: []      }
+        launched: []
+      }
     },
 
 
