@@ -172,8 +172,8 @@ export default {
       { hid: 'og:site_name', name: 'og:site_name', content: 'BSN' },
       { hid: 'og:type', name: 'og:type', content: 'website' },
       { hid: 'og:title', name: 'og:title', content: this.launched.name + ' - BSN' }, 
-      { hid: 'description', property: 'og:description', content: this.launched.description },
-      { name: 'og:image', content: this.launched.image },
+      { hid: 'og:description', property: 'og:description', content: this.launched.description },
+      { hid: 'og:image', name: 'og:image', content: this.launched.image },
       // Twitter
       { hid: 'twitter:title', name: 'twitter:title', content: this.launched.name + ' - BSN' },
       { hid: 'twitter:description', property: 'twitter:description', content: this.launched.description },
