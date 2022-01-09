@@ -61,7 +61,10 @@ setInterval(function(){
       launches.push(response.data);
       console.log('Launches pushed')
      });
- },6 * 60000);
+ },10 * 60000);
+
+ // fetch past launches every 20 minutes
+ 
 
 //fetch events
 setInterval(function(){

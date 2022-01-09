@@ -16,7 +16,7 @@
       <div class="inline-flex space-x-4 mt-2">
 
       <a :href="`/launches/` + launched.slug" class="flex-1 w-14 bg-green-300 dark:bg-green-500  font-bold py-2 px-4 rounded-full " v-if="launched.status.abbrev === 'Go'"> {{ launched.status.abbrev }}</a>
-      <a :href="`/launches/` + launched.slug" class="flex-1 w-21 bg-green-300 dark:bg-green-500  font-bold py-2 px-4 rounded-full " v-if="launched.status.abbrev === 'Success'"> {{ launched.status.abbrev }}</a>
+      <a :href="`/launches/` + launched.slug" class="flex-1 w-21 bg-green-300 dark:bg-green-500  font-bold py-2 px-4 rounded-full " v-else-if="launched.status.abbrev === 'Success'"> {{ launched.status.abbrev }}</a>
       <a :href="`/launches/` + launched.slug" class="flex-1 w-14 bg-yellow-400 dark:bg-yellow-400  font-bold py-2 px-3 rounded-full " v-else> {{ launched.status.abbrev }}</a>
       <span v-if="launched.vidURLs[0]" class="relative inline-flex rounded-full shadow-sm">
         <a v-if="launched.vidURLs[0]" :href="launched.vidURLs[0].url" class="flex-1 bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded-full dark:bg-gray-600 dark:hover:bg-gray-500">Watch Live</a>
@@ -33,6 +33,9 @@
     <div class="col-start-1 row-start-3 space-y-3 px-4 pb-4">
       <p v-if="launched.mission" class="flex items-center text-black dark:text-white text-sm font-medium ">
         {{ launched.mission.description }}
+      </p>
+      <p v-else class="flex items-center text-black dark:text-white text-sm font-medium ">
+        There is no description for this launch, scroll down to see other details.
       </p>
       <Countdown :date="launched.net" @onFinish="finish()"></Countdown>
     </div>
@@ -224,9 +227,8 @@
 
 export default {
   head() {
-    return {
-    title: 'Launches - BSN',
-    meta: [
+   const title = 'Launches - BSN';
+   const meta = [
       // Basic meta tags
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -235,31 +237,61 @@ export default {
       { hid: 'og:site_name', name: 'og:site_name', content: 'BSN' },
       { hid: 'og:type', name: 'og:type', content: 'website' },
       { hid: 'og:title', name: 'og:title', content: this.launched.name + ' - BSN' }, 
-      { hid: 'og:description', property: 'og:description', content: "Get the latest information about the launch. Click to find out more!" },
-      { hid: 'og:image', property: 'og:image', content: this.launched.image },
-      { hid: 'og:url', property: 'og:url', content: 'https://beyondspacenews.com/launches/' + this.launched.id },
+      { hid: 'og:url', property: 'og:url', content: 'https://beyondspacenews.com/launches/' + this.page_slug },
+          // Description inject
+          // Image inject
 
-      { hid: 'og:image', name: 'og:image', content: this.launched.image },
       // Twitter
       { hid: 'twitter:title', name: 'twitter:title', content: this.launched.name + ' - BSN' },
-      { hid: 'twitter:description', property: 'twitter:description', content: "Get the latest information about the launch. Click to find out more!" },
-      { name: 'twitter:image', content: this.launched.image },
       { name: 'twitter:card', content: 'summary_large_image' }, 
+          // Description inject
+          // Image inject
+
       // SEO
       { hid: 'title', name: 'title', content: this.launched.name + ' - BSN' },
-      { hid: 'description', name: 'description', content: "Get the latest information about the launch. Click to find out more!" },
+          // Description inject
       { hid: 'keywords', name: 'keywords', content: 'rocket, launches, news, spaceflight, nasa, spacex, starship, astronomy, apod, liftoff, tv, space' },
       { hid: 'author', name: 'author', content: 'BSN' },
       { hid: 'robots', name: 'robots', content: 'index, follow' },
       { hid: 'language', name: 'language', content: 'English' },
       { hid: 'revisit-after', name: 'revisit-after', content: '1 days' },
-
-    ],
-   link: [
+    ]
+   const link = [
       { rel: 'icon', type: 'image/x-icon', href: '/icon.png' },
       { rel: 'shortcut icon', type: 'image/x-icon', href: '/icon.png' },
         ]
-  }
+
+
+    if(this.launched?.mission?.description) {
+      meta.push(
+        {hid: 'og:description', property: 'og:description', content: this.launched.mission.description },
+        {hid: 'twitter:description', name: 'twitter:description', content: this.launched.mission.description },
+        {hid: 'description', name: 'description', content: this.launched.mission.description },
+      );
+    } else {
+      meta.push(
+        {hid: 'og:description', property: 'og:description', content: 'There is no description for this launch, but you can click to find out more!' },
+        {hid: 'twitter:description', name: 'twitter:description', content: 'There is no description for this launch, but you can click to find out more!' },
+        {hid: 'description', name: 'description', content: 'There is no description for this launch, but you can click to find out more!' },
+      ); 
+     }
+    if(this.launched.image) {
+        meta.push(
+        { hid: 'og:image', property: 'og:image', content: this.launched.image },
+        { hid: 'og:image:alt', property: 'og:image:alt', content: this.launched.name + ' - BSN'},
+        { hid: 'twitter:image', name: 'twitter:image', content: this.launched.image },
+        { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: this.launched.name + ' - BSN' },
+        );
+    } else {
+        meta.push(
+        { hid: 'og:image', property: 'og:image', content: 'https://beyondspacenews.com/icon.png' },
+        { hid: 'og:image:alt', property: 'og:image:alt', content: 'BSN'},
+        { hid: 'twitter:image', name: 'twitter:image', content: 'https://beyondspacenews.com/icon.png' },
+        { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: 'BSN' },
+        );
+    }
+
+    return { title, meta, link }
   },
 
  data() {

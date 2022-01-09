@@ -36,6 +36,9 @@
       <p v-if="launch.results[0].mission" class="flex items-center text-black dark:text-white text-sm font-medium ">
         {{ launch.results[0].mission.description }}
       </p>
+      <p v-else class="flex items-center text-black dark:text-white text-sm font-medium ">
+        There is no description for this launch, but you can click on "Info" to find out more!
+      </p>
       
       <Countdown :date="launch.results[0].net" @onFinish="finish()"></Countdown>
 
@@ -80,6 +83,7 @@
           </div>
 				<h4 class="text-xl font-semibold pb-3"> {{ launch.results[i].name }}</h4>
 				<p class="text-sm" v-if="launch.results[i].mission"> {{ launch.results[i].mission.description }} </p>
+        <p v-else class="text-sm ">There is no description for this launch, but you can click on "Info" to find out more!</p>
         <Countdown class="mt-2" :date="launch.results[i].net" @onFinish="finish()"></Countdown> 
     
       </div>
