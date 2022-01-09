@@ -1,5 +1,6 @@
 export default {
-
+  target: 'static',
+  ssr: false,
   components: true,
 
   buildModules: [
@@ -42,5 +43,9 @@ export default {
       /* meta options */
     }
   },
+
+  generate: {
+    fallback: true
+  }
   
 }
