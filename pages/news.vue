@@ -55,7 +55,7 @@
 
 <br>
 <div class="w-full rounded-lg ">
-<adsbygoogle page-url="https://beyondspacenews.com/"/>
+<adsbygoogle/>
 </div>
 <br>
 
