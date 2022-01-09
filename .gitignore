@@ -90,5 +90,5 @@ sw.*
 *.swp
 
 # /api
-/api
+/api/index.js
 
