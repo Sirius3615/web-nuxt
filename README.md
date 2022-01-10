@@ -1,4 +1,4 @@
-# [BeyondSpaceNews](https://beyondspacenews.com)
+# [BeyondSpaceNews](https://beyondspacenews.com) / Deployed branch is called: `static`
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5c2ba9d0-d9df-407d-8f1e-92144138ea27/deploy-status)](https://app.netlify.com/sites/beyondspacenews/deploys)  
 <hr>
