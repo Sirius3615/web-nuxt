@@ -94,7 +94,7 @@
 
 <br>
 <div class="w-full rounded-lg ">
-<adsbygoogle/>
+<adsbygoogle page-url="https://beyondspacenews.com/"/>
 </div>
 <br>
 
@@ -147,7 +147,7 @@
 
 <br>
 <div class="w-full rounded-lg ">
-<adsbygoogle/>
+<adsbygoogle page-url="https://beyondspacenews.com/"/>
 </div>
 <br>
 
@@ -199,7 +199,7 @@
 
 <br>
 <div class="w-full rounded-lg ">
-<adsbygoogle/>
+<adsbygoogle page-url="https://beyondspacenews.com/"/>
 </div>
 <br> 
 

@@ -23,4 +23,21 @@ export default {
     fallback: true
   },
   
+  pwa: {
+    manifest: {
+      name: 'BeyondSpaceNews',
+      lang: 'en',
+      description: '',
+      theme_color: '#34D399',
+      start_url: '/',
+      short_name: 'BSN',
+      useWebmanifestExtension: false,
+      display: 'standalone'
+    },
+    meta: {
+      /* meta options */
+    }
+  },
+
+  
 }
