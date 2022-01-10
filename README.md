@@ -1,12 +1,12 @@
 # [BeyondSpaceNews](https://beyondspacenews.com)
 
-[![DigitalOcean Referral Badge](https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg)](https://www.digitalocean.com/?refcode=f829d8a2eb78&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)     
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5c2ba9d0-d9df-407d-8f1e-92144138ea27/deploy-status)](https://app.netlify.com/sites/beyondspacenews/deploys)  
 <hr>
 
 * This website is built on NuxtJs and TialwindCss with few other dependencies. 
 * You are free to contribute to this project by subbmitting pull requests, creating issues on GitHub or starting a discussion.
 
-You may support us by [donating](https://www.buymeacoffee.com/sirius) or by uisng our affiliate link to [Digital Ocean](https://m.do.co/c/f829d8a2eb78)
+You may support us by [donating](https://www.buymeacoffee.com/sirius) 
 
 <br>
 
