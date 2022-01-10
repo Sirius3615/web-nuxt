@@ -107,7 +107,7 @@ export default {
       }
     },
     async asyncData({ $axios }){
-      const newss = (await $axios.get('https://api.spaceflightnewsapi.net/v3/articles?_limit=5')).data
+      const newss = (await $axios.get('https://api.spaceflightnewsapi.net/v3/articles?_limit=15')).data
         return { newss }
     },
 
