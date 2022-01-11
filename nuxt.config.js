@@ -16,7 +16,7 @@ export default {
   ],
 
   googleAnalytics: {
-    id: '285402647'
+    id: 'G-25VPSH13SQ'
   },
 
   generate: {
