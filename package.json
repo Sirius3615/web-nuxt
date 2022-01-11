@@ -14,6 +14,11 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/google-adsense": "^1.4.0",
+<<<<<<< Updated upstream
+=======
+    "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/vercel-builder": "^0.22.1",
+>>>>>>> Stashed changes
     "axios": "^0.24.0",
     "body-parser": "^1.19.1",
     "core-js": "^3.15.1",

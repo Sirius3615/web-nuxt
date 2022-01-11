@@ -1,5 +1,13 @@
 export default {
+<<<<<<< Updated upstream
 
+=======
+  // target: 'static',
+ //  ssr: false,
+  loading: {
+    color: '#4ade80',
+  },
+>>>>>>> Stashed changes
   components: true,
 
   buildModules: [
