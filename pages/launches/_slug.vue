@@ -303,7 +303,7 @@ export default {
 
 
     async fetch() {
-  const launch = await fetch(`https://beyond-apis.glitch.me/launch/api/v2/${this.$route.params.slug}`) // process.env.DOMAIN + "/api/launches/ ...."
+  const launch = await fetch(`https://api-bsn.herokuapp.com/launch/api/v2/${this.$route.params.slug}`) // process.env.DOMAIN + "/api/launches/ ...."
     .then((res) => res.json())
 
   if (launch.slug === this.$route.params.slug) {

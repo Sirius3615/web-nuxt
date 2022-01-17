@@ -2,7 +2,7 @@ export default {
   target: 'static',
   ssr: false,
   loading: {
-    color: '#4ade80',
+    color: 'green',
   },
   components: true,
 
