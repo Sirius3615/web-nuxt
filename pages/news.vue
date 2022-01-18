@@ -54,7 +54,7 @@
 </div>
 
 <br>
-<div class="w-full rounded-lg ">
+<div class="rounded-lg w-screen">
 <adsbygoogle page-url="https://beyondspacenews.com/"/>
 </div>
 <br>
