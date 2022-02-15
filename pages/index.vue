@@ -199,7 +199,7 @@
 
 <br>
 <div class="rounded-lg w-screen">
-<adsbygoogle page-url="https://beyondspacenews.com/" class="w-screen"/>
+<adsbygoogle page-url="https://beyondspacenews.com/"/>
 </div>
 <br> 
 
