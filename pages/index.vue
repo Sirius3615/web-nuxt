@@ -94,7 +94,7 @@
 
 <br>
 <div class="rounded-lg w-screen">
-<adsbygoogle page-url="https://beyondspacenews.com/"/>
+<adsbygoogle ad-slot="1163269869" ad-format="rectangle" page-url="https://beyondspacenews.com/"/>
 </div>
 <br>
 
@@ -147,7 +147,7 @@
 
 <br>
 <div class="rounded-lg w-screen">
-<adsbygoogle page-url="https://beyondspacenews.com/"/>
+<adsbygoogle ad-slot="1163269869" ad-format="rectangle" page-url="https://beyondspacenews.com/"/>
 </div>
 <br>
 
@@ -199,7 +199,7 @@
 
 <br>
 <div class="rounded-lg w-screen">
-<adsbygoogle page-url="https://beyondspacenews.com/"/>
+<adsbygoogle ad-slot="1163269869" ad-format="rectangle" page-url="https://beyondspacenews.com/"/>
 </div>
 <br> 
 

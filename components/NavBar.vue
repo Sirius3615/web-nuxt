@@ -40,7 +40,7 @@
 <script>
 
 export default ({
-    mounted() {
+    mounted() { 
         // Navbar Toggle
 document.addEventListener('DOMContentLoaded', function() {
 
