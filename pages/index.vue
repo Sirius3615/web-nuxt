@@ -356,8 +356,8 @@ export default {
 
  
     async asyncData({ $axios }){
-       const launches = (await $axios.get('https://api-bsn.herokuapp.com/launch/api/v2/all')).data
-       const events = (await $axios.get('https://api-bsn.herokuapp.com/launch/api/v2/events')).data
+       const launches = (await $axios.get('https://beyond-apis.glitch.me/launch/api/v2/all')).data 
+       const events = (await $axios.get('https://beyond-apis.glitch.me/launch/api/v2/events')).data
        const newss = (await $axios.get('https://api.spaceflightnewsapi.net/v3/articles?_limit=5')).data
        const blogg = (await $axios.get('https://api.spaceflightnewsapi.net/v3/blogs?_limit=5')).data
         return { launches, events, newss, blogg }

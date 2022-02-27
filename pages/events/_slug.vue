@@ -204,7 +204,7 @@ export default {
 
 
     async fetch() {
-  const launch = await fetch(`https://api-bsn.herokuapp.com/api/events/${this.$route.params.slug}`)
+  const launch = await fetch(`https://beyond-apis.glitch.me/api/events/${this.$route.params.slug}`)
     .then((res) => res.json())
 
   if (launch.slug === this.$route.params.slug) {

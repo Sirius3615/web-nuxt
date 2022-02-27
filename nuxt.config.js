@@ -30,8 +30,7 @@ export default{
     hostname: 'https://beyondspacenews.com/',
     gzip: false,
     path: '/sitemap.xml',
-
-
+    
     routes: async () => {
       const { data } = await axios.get('https://ll.thespacedevs.com/2.2.0/launch/upcoming/?limit=10&hide_recent_previous=true&mode=detailed&format=json')
 

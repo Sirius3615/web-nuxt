@@ -127,7 +127,7 @@ export default {
       }
     },
     async asyncData({ $axios }){
-       const events = (await $axios.get('https://api-bsn.herokuapp.com/launch/api/v2/events')).data
+       const events = (await $axios.get('https://beyond-apis.glitch.me/launch/api/v2/events')).data
        return { events }
     },
 
