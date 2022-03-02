@@ -60,8 +60,10 @@
 
  
 <br>
-<div class="rounded-lg w-screen">
-<adsbygoogle ad-slot="1163269869" ad-format="rectangle" page-url="https://beyondspacenews.com/"/>
+<div class="rounded-lg w-screen contents">
+
+<adsbygoogle ad-slot="1163269869" ad-format="rectangle" ad-style="{ display: 'contents' }" page-url="https://beyondspacenews.com/"/>
+
 </div>
 <br>
 
@@ -212,8 +214,10 @@
 </div>
 
 <br>
-<div class="rounded-lg w-screen">
-<adsbygoogle ad-slot="1163269869" ad-format="rectangle" page-url="https://beyondspacenews.com/"/>
+<div class="rounded-lg w-screen contents">
+
+<adsbygoogle ad-slot="1163269869" ad-format="rectangle" ad-style="{ display: 'contents' }" page-url="https://beyondspacenews.com/"/>
+
 </div>
 <br>
 
