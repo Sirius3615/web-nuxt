@@ -86,8 +86,7 @@
 </div>
 
 <br>
-<div class="rounded-lg w-screen contents">
-
+<div class="rounded-lg w-screen contents" width="500px">
 <adsbygoogle ad-slot="1163269869" ad-format="rectangle" ad-style="{ display: 'contents' }" page-url="https://beyondspacenews.com/"/>
 </div>
 <br>
