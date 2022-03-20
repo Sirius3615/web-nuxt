@@ -52,7 +52,7 @@
 
  
 <br>
-<div class="rounded-lg w-screen contents" width="500px">
+<div class="rounded-lg contents" width="500px">
 
 
 <adsbygoogle ad-slot="1163269869" ad-format="auto"/>
@@ -149,7 +149,7 @@
 
 
 <br>
-<div class="rounded-lg w-screen contents" width="500px">
+<div class="rounded-lg contents" width="500px">
 
 
 <adsbygoogle ad-slot="1163269869" ad-format="auto"/>
