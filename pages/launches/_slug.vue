@@ -60,12 +60,11 @@
 
  
 <br>
-<div class="rounded-lg contents" width="500px">
-
-
-<adsbygoogle ad-slot="1163269869" ad-format="auto" ad-style="{ width: 500px; display: block;}"/>
-
+<div class="rounded-lg contents p-5" width="500px">
+<adsbygoogle ad-slot="1163269869" ad-format="auto" ad-style="{ width: 500px;}"/>
 </div>
+
+
 <br>
 
 <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2 p-0 m-0  ">
@@ -215,12 +214,11 @@
 </div>
 
 <br>
-<div class="rounded-lg contents" width="500px">
-
-
-<adsbygoogle ad-slot="1163269869" ad-format="auto" ad-style="{ width: 500px; display: block;}"/>
-
+<div class="rounded-lg contents p-5" width="500px">
+<adsbygoogle ad-slot="1163269869" ad-format="auto" ad-style="{ width: 500px;}"/>
 </div>
+
+
 <br>
 
 </div>

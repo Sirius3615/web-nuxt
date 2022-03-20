@@ -53,12 +53,11 @@
 </div>
 
 <br>
-<div class="rounded-lg contents" width="500px">
-
-
-<adsbygoogle ad-slot="1163269869" ad-format="auto" ad-style="{ width: 500px; display: block;}"/>
-
+<div class="rounded-lg contents p-5" width="500px">
+<adsbygoogle ad-slot="1163269869" ad-format="auto" ad-style="{ width: 500px;}"/>
 </div>
+
+
 <br>
 
 
