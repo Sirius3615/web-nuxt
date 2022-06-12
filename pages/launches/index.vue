@@ -139,7 +139,7 @@ export default {
       }
     },
     async asyncData({ $axios }){
-       const launches = (await $axios.get('https://beyond-apis.glitch.me/launch/api/v2/all')).data
+       const launches = (await $axios.get('https://beyond-api.glitch.me/launch/api/v2/all')).data
        return { launches }
     },
 
